@@ -4,6 +4,12 @@ The website for [smartadviser.co.uk](https://www.smartadviser.co.uk).
 
 ## Development
 
+### Install
+
+```bash
+npm i
+```
+
 ### Run locally
 
 ```bash
