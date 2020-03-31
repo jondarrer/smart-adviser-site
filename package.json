@@ -1,0 +1,20 @@
+{
+  "name": "smart-adviser-site",
+  "version": "1.0.0",
+  "description": "The website for Smart Adviser",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jondarrer/smart-adviser-site.git"
+  },
+  "author": "Jonathan Darrer <jonny@jondarrer.me.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jondarrer/smart-adviser-site/issues"
+  },
+  "homepage": "https://github.com/jondarrer/smart-adviser-site#readme"
+}
