@@ -4,21 +4,7 @@ The website for [smartadviser.co.uk](https://www.smartadviser.co.uk).
 
 ## Development
 
-### Pre-requirements
-
-Install `firebase-tools` globally with:
-
-```bash
-npm install -g firebase-tools
-```
-
-Then login:
-
-```bash
-firebase login
-```
-
-### Running locally
+### Run locally
 
 ```bash
 npm start
