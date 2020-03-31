@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --passWithNoTests",
+    "start": "webpack-dev-server --open",
     "build": "webpack"
   },
   "repository": {
@@ -31,6 +32,7 @@
     "lint-staged": "^10.1.0",
     "prettier": "2.0.2",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }

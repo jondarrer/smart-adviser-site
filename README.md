@@ -18,6 +18,24 @@ Then login:
 firebase login
 ```
 
+### Running locally
+
+```bash
+npm start
+```
+
+### Test
+
+```bash
+npm test
+```
+
+### Build
+
+```bash
+npm run build
+```
+
 ### Deploy
 
 Deploy with:
