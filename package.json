@@ -4,7 +4,7 @@
   "description": "The website for Smart Adviser",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "build": "webpack"
   },
   "repository": {
@@ -16,5 +16,19 @@
   "bugs": {
     "url": "https://github.com/jondarrer/smart-adviser-site/issues"
   },
-  "homepage": "https://github.com/jondarrer/smart-adviser-site#readme"
+  "homepage": "https://github.com/jondarrer/smart-adviser-site#readme",
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@types/jest": "^25.1.4",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.2.4",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.3",
+    "jest": "^25.2.4",
+    "lint-staged": "^10.1.0"
+  },
+  "devDependencies": {
+    "prettier": "2.0.2"
+  }
 }
