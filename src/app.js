@@ -1,6 +1,10 @@
 const React = require('react');
 const { Link, Route, Switch } = require('react-router-dom');
 
+const { Home, About } = require('./routes');
+
+const { LanguageContext } = require('./components');
+
 const App = () => (
   <div>
     <nav>
@@ -15,10 +19,24 @@ const App = () => (
     </nav>
     <Switch>
       <Route path="/" exact>
-        <h1>index-content</h1>
+        <LanguageContext.Provider value="en">
+          <Home />
+        </LanguageContext.Provider>
       </Route>
       <Route path="/about">
-        <h1>about-content</h1>
+        <LanguageContext.Provider value="en">
+          <About />
+        </LanguageContext.Provider>
+      </Route>
+      <Route path="/ro" exact>
+        <LanguageContext.Provider value="ro">
+          <Home />
+        </LanguageContext.Provider>
+      </Route>
+      <Route path="/ro/despre">
+        <LanguageContext.Provider value="ro">
+          <About />
+        </LanguageContext.Provider>
       </Route>
       <Route>
         <h1>not-found</h1>

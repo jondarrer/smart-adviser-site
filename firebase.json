@@ -8,12 +8,20 @@
     ],
     "rewrites": [
       {
-        "source": "**",
-        "destination": "/__index.html"
-      },
-      {
         "source": "/about",
         "destination": "/__about.html"
+      },
+      {
+        "source": "/ro",
+        "destination": "/__ro.html"
+      },
+      {
+        "source": "/ro/despre",
+        "destination": "/__ro_despre.html"
+      },
+      {
+        "source": "**",
+        "destination": "/__index.html"
       }
     ]
   }

@@ -23,7 +23,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin(),
     new ReactStaticSiteHydrater({
-      routes: ['/', '/about'],
+      routes: ['/', '/about', '/ro', '/ro/despre'],
       component: app,
     }),
   ],

@@ -16,6 +16,13 @@ npm i
 npm start
 ```
 
+You can also try out how it will work when deployed to Firebase with:
+
+```bash
+npm run build
+firebase serve --only hosting
+```
+
 ### Test
 
 ```bash
