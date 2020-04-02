@@ -1,4 +1,4 @@
-const i18n = require('i18next');
+const i18n = require('i18next/dist/cjs/i18next');
 const { initReactI18next } = require('react-i18next');
 
 i18n

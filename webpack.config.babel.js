@@ -31,5 +31,8 @@ module.exports = {
     contentBase: join(__dirname, 'dist'),
     compress: true,
     port: 9000,
+    historyApiFallback: {
+      index: 'index.html',
+    },
   },
 };
