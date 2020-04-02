@@ -3,7 +3,7 @@ const { Link, Route, Switch } = require('react-router-dom');
 
 const { Home, About } = require('./routes');
 
-const { LanguageContext } = require('./components');
+const { LanguageContext, i18n } = require('./components');
 
 const App = () => (
   <div>
@@ -14,6 +14,12 @@ const App = () => (
         </li>
         <li>
           <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/ro">Casa</Link>
+        </li>
+        <li>
+          <Link to="/ro/despre">Despre</Link>
         </li>
       </ul>
     </nav>
