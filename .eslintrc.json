@@ -4,6 +4,13 @@
     "node": true,
     "jest": true
   },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 11,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "rules": {
     "semi": "error"
   }
