@@ -1,7 +1,7 @@
 const React = require('react');
 const { Link, Route, Switch } = require('react-router-dom');
 
-const App = (
+const App = () => (
   <div>
     <nav>
       <ul>

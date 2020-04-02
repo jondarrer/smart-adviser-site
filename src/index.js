@@ -5,8 +5,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './app';
 
 hydrate(
-  document.getElementById('root'),
   <Router>
     <App />
-  </Router>
+  </Router>,
+  document.getElementById('root')
 );

@@ -7,7 +7,8 @@
     "test": "jest --passWithNoTests",
     "start": "webpack-dev-server --open",
     "build": "webpack",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "analyzer": "webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
     "react-router-dom": "^5.1.2",
     "react-static-site-hydrater": "^1.1.3",
     "webpack": "^4.42.1",
+    "webpack-bundle-analyzer": "^3.6.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   }
