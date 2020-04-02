@@ -4,7 +4,7 @@ const { useTranslation } = require('react-i18next');
 const { LanguageContext } = require('../components');
 
 const About = () => {
-  const language = React.useContext(LanguageContext);
+  const lng = React.useContext(LanguageContext);
   const { t, i18n } = useTranslation();
 
   return (
