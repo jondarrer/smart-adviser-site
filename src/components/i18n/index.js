@@ -19,12 +19,16 @@ i18n
         translation: {
           Home: 'Home',
           About: 'About',
+          '/': '/',
+          '/about': '/about',
         },
       },
       ro: {
         translation: {
           Home: 'Casa',
           About: 'Despre',
+          '/': '/ro',
+          '/about': '/ro/despre',
         },
       },
     },
