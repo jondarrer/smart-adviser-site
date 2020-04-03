@@ -8,6 +8,7 @@ module.exports = {
   entry: resolve(__dirname, './src'),
   output: {
     path: resolve(__dirname, 'dist'),
+    publicPath: '/',
     filename: 'bundle.js',
   },
   module: {
@@ -21,7 +22,9 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      scriptLoading: 'defer',
+    }),
     new ReactStaticSiteHydrater({
       routes: ['/', '/about', '/ro', '/ro/despre'],
       component: app,

@@ -6,6 +6,7 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "trailingSlash": false,
     "rewrites": [
       {
         "source": "/about",
@@ -20,7 +21,7 @@
         "destination": "/__ro_despre.html"
       },
       {
-        "source": "**",
+        "source": "!/@(js|css)/**",
         "destination": "/__index.html"
       }
     ]
