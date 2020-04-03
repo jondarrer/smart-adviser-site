@@ -9,7 +9,7 @@ i18n
   .init({
     lng: 'en',
     fallbackLng: 'en',
-    debug: true,
+    debug: false,
 
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
@@ -21,6 +21,8 @@ i18n
           About: 'About',
           '/': '/',
           '/about': '/about',
+          '/ro': '/',
+          '/ro/despre': '/about',
         },
       },
       ro: {
@@ -29,6 +31,8 @@ i18n
           About: 'Despre',
           '/': '/ro',
           '/about': '/ro/despre',
+          '/ro': '/ro',
+          '/ro/despre': '/ro/despre',
         },
       },
     },
