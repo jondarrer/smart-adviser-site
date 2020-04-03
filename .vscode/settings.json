@@ -1,4 +1,6 @@
 {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
     "workbench.colorCustomizations": {
         "activityBar.background": "#93e6fc",
         "activityBar.activeBackground": "#93e6fc",
@@ -18,6 +20,7 @@
     "peacock.color": "#61dafb",
     "cSpell.words": [
         "Darrer",
+        "despre",
         "smartadviser"
     ]
 }
