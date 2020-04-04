@@ -1,5 +1,5 @@
-const React = require('react');
+import React from 'react';
 
 const LanguageContext = React.createContext('en');
 
-module.exports = LanguageContext;
+export default LanguageContext;

@@ -1,8 +1,8 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ReactStaticSiteHydrater = require('react-static-site-hydrater');
-const { resolve, join } = require('path');
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ReactStaticSiteHydrater from 'react-static-site-hydrater';
+import { resolve, join } from 'path';
 
-const app = require('./src/app');
+import App from './src/app';
 
 module.exports = {
   entry: resolve(__dirname, './src'),
@@ -23,11 +23,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      filename: 'default.html',
       scriptLoading: 'defer',
     }),
     new ReactStaticSiteHydrater({
       routes: ['/', '/about', '/ro', '/ro/despre'],
-      component: app,
+      component: App,
+      baseFilename: 'default.html',
     }),
   ],
   devServer: {

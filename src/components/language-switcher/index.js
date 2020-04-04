@@ -1,8 +1,8 @@
-const React = require('react');
-const { Link, useLocation } = require('react-router-dom');
-const { useTranslation } = require('react-i18next');
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
-const LanguageContext = require('../../components/language-context');
+import LanguageContext from '../../components/language-context';
 
 const LanguageSwitcher = ({ languages }) => {
   const lng = React.useContext(LanguageContext);
@@ -26,4 +26,4 @@ const LanguageSwitcher = ({ languages }) => {
   );
 };
 
-module.exports = LanguageSwitcher;
+export default LanguageSwitcher;

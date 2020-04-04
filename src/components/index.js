@@ -1,6 +1,6 @@
-const LanguageContext = require('./language-context');
-const i18n = require('./i18n');
-const Navbar = require('./navbar');
-const LanguageSwitcher = require('./language-switcher');
+import LanguageContext from './language-context';
+import i18n from './i18n';
+import Navbar from './navbar';
+import LanguageSwitcher from './language-switcher';
 
-module.exports = { LanguageContext, i18n, Navbar, LanguageSwitcher };
+export { LanguageContext, i18n, Navbar, LanguageSwitcher };

@@ -1,4 +1,4 @@
-const Home = require('./home');
-const About = require('./about');
+import Home from './home';
+import About from './about';
 
-module.exports = { Home, About };
+export { Home, About };

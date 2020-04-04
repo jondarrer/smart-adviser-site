@@ -1,7 +1,7 @@
-const React = require('react');
-const { useTranslation } = require('react-i18next');
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-const { LanguageContext } = require('../components');
+import { LanguageContext } from '../components';
 
 const About = () => {
   const lng = React.useContext(LanguageContext);
@@ -14,4 +14,4 @@ const About = () => {
   );
 };
 
-module.exports = About;
+export default About;

@@ -1,14 +1,9 @@
-const React = require('react');
-const { Link, Route, Switch } = require('react-router-dom');
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 
-const { Home, About } = require('./routes');
+import { Home, About } from './routes';
 
-const {
-  LanguageContext,
-  i18n,
-  Navbar,
-  LanguageSwitcher,
-} = require('./components');
+import { LanguageContext, i18n, Navbar, LanguageSwitcher } from './components';
 
 const App = () => (
   <div>
@@ -48,4 +43,4 @@ const App = () => (
   </div>
 );
 
-module.exports = App;
+export default App;
