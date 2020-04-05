@@ -15,11 +15,11 @@ const About = ({ locales }) => {
     <>
       <Helmet>
         <html lang={lng} />
-        <title>{t('Home', { lng })} - smartadviser.co.uk</title>
+        <title>{t('About', { lng })} - smartadviser.co.uk</title>
         {locales.map((locale) => (
           <link
             rel="alternate"
-            href={`http://example.com${t(location.pathname, {
+            href={`https://smartadviser.co.uk${t(location.pathname, {
               lng: getLanguageForLocale(locale),
             })}`}
             hrefLang={locale}

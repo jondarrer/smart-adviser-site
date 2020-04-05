@@ -19,7 +19,7 @@ const Home = ({ locales }) => {
         {locales.map((locale) => (
           <link
             rel="alternate"
-            href={`http://example.com${t(location.pathname, {
+            href={`https://smartadviser.co.uk${t(location.pathname, {
               lng: getLanguageForLocale(locale),
             })}`}
             hrefLang={locale}
