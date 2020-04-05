@@ -19,6 +19,12 @@ npm start
 You can also try out how it will work when deployed to Firebase with:
 
 ```bash
+npm run start:fb
+```
+
+Which will run the following commands:
+
+```bash
 npm run build
 firebase serve --only hosting
 ```

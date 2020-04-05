@@ -6,6 +6,8 @@
   "scripts": {
     "test": "jest --passWithNoTests",
     "start": "webpack-dev-server --open",
+    "prestart:fb": "npm run build",
+    "start:fb": "firebase serve --only hosting",
     "build": "webpack",
     "prepare": "npm run build",
     "analyzer": "webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json"
@@ -22,6 +24,7 @@
   "homepage": "https://github.com/jondarrer/smart-adviser-site#readme",
   "dependencies": {
     "i18next": "^19.3.4",
+    "react-helmet-async": "^1.0.4",
     "react-i18next": "^11.3.4"
   },
   "devDependencies": {
@@ -43,7 +46,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
-    "react-static-site-hydrater": "^1.2.3",
+    "react-static-site-hydrater": "^2.0.1",
     "react-test-renderer": "^16.13.1",
     "webpack": "^4.42.1",
     "webpack-bundle-analyzer": "^3.6.1",
