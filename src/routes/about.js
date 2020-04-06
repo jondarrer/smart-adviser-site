@@ -30,6 +30,7 @@ const About = ({ locales }) => {
           name="description"
           content={t('meta-description-about', { lng })}
         />
+        <meta name="keywords" content={t('meta-keywords', { lng })} />
       </Helmet>
       <h1>
         {t('About', { lng })} ({lng})
