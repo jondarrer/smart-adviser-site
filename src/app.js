@@ -1,14 +1,15 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { ThemeProvider } from 'theme-ui';
 
 import { Home, About } from './routes';
-
 import { LanguageContext, i18n, Navbar, LanguageSwitcher } from './components';
+import theme from './theme';
 
 const locales = ['ro', 'en-gb'];
 
 const App = () => (
-  <div>
+  <ThemeProvider theme={theme}>
     <Switch>
       <Route path="/" exact>
         <LanguageContext.Provider value="en">
@@ -42,7 +43,7 @@ const App = () => (
         <h1>not-found</h1>
       </Route>
     </Switch>
-  </div>
+  </ThemeProvider>
 );
 
 export default App;
