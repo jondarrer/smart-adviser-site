@@ -26,6 +26,10 @@ const Home = ({ locales }) => {
             key={locale}
           />
         ))}
+        <meta
+          name="description"
+          content={t('meta-description-home', { lng })}
+        />
       </Helmet>
       <h1>
         {t('Home', { lng })} ({lng})

@@ -23,6 +23,10 @@ i18n
           '/about': '/about',
           '/ro': '/',
           '/ro/despre': '/about',
+          'meta-description-home':
+            'Smart Adviser is an Accountancy firm in Milton Keynes working with businesses of all sizes. With many years experience in finance you can rely on us to help your business thrive.',
+          'meta-description-about':
+            'Smart Adviser is an Accountancy firm in Milton Keynes working with businesses of all sizes. We offer a variety of cost effective services to self-employed, limited companies and others.',
         },
       },
       ro: {
@@ -33,6 +37,10 @@ i18n
           '/about': '/ro/despre',
           '/ro': '/ro',
           '/ro/despre': '/ro/despre',
+          'meta-description-home':
+            'Smart Adviser este o firmă de contabilitate din Milton Keynes, Marea Britanie care lucrează cu companii de toate dimensiunile. Cu mulți ani de experiență în finanțe, vă puteți baza pe noi pentru a vă ajuta afacerea să prospere.',
+          'meta-description-about':
+            'Smart Adviser este o firmă de contabilitate din Milton Keynes, Marea Britanie care lucrează cu companii de toate dimensiunile. Oferim o varietate de servicii eficiente din punct de vedere al costurilor pentru angajați independenți, companii cu capital limitat și altele.',
         },
       },
     },
