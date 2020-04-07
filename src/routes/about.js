@@ -14,7 +14,9 @@ const About = ({ locales }) => {
     <>
       <Helmet>
         <html lang={lng} />
-        <title>{t('About', { lng })} - smartadviser.co.uk</title>
+        <title>
+          {t('About', { lng })} - {t('site-name', { lng })}
+        </title>
         {locales.map((locale) => (
           <link
             rel="alternate"
