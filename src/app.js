@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from 'theme-ui';
 
 import { Home, About } from './routes';
-import { Navbar, LanguageSwitcher } from './components';
+import { Layout } from './components';
 import { LanguageContext, i18n } from './utils';
 import theme from './theme';
 
@@ -14,34 +14,36 @@ const App = () => (
     <Switch>
       <Route path="/" exact>
         <LanguageContext.Provider value="en">
-          <LanguageSwitcher languages={['en', 'ro']} />
-          <Navbar />
-          <Home locales={locales} />
+          <Layout>
+            <Home locales={locales} />
+          </Layout>
         </LanguageContext.Provider>
       </Route>
       <Route path="/about">
         <LanguageContext.Provider value="en">
-          <LanguageSwitcher languages={['en', 'ro']} />
-          <Navbar />
-          <About locales={locales} />
+          <Layout>
+            <About locales={locales} />
+          </Layout>
         </LanguageContext.Provider>
       </Route>
       <Route path="/ro" exact>
         <LanguageContext.Provider value="ro">
-          <LanguageSwitcher languages={['en', 'ro']} />
-          <Navbar />
-          <Home locales={locales} />
+          <Layout>
+            <Home locales={locales} />
+          </Layout>
         </LanguageContext.Provider>
       </Route>
       <Route path="/ro/despre">
         <LanguageContext.Provider value="ro">
-          <LanguageSwitcher languages={['en', 'ro']} />
-          <Navbar />
-          <About locales={locales} />
+          <Layout>
+            <About locales={locales} />
+          </Layout>
         </LanguageContext.Provider>
       </Route>
       <Route>
-        <h1>not-found</h1>
+        <Layout>
+          <h1>not-found</h1>
+        </Layout>
       </Route>
     </Switch>
   </ThemeProvider>
