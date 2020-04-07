@@ -1,11 +1,7 @@
 {
   "hosting": {
     "public": "dist",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "trailingSlash": false,
     "rewrites": [
       {
@@ -21,7 +17,7 @@
         "destination": "/__ro_despre.html"
       },
       {
-        "source": "!/@(js|css)/**",
+        "source": "!/@(js|css|jpg|png|txt)/**",
         "destination": "/__index.html"
       }
     ]

@@ -1,6 +1,7 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ReactStaticSiteHydrater from 'react-static-site-hydrater';
 import SitemapPlugin from 'sitemap-webpack-plugin';
+import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import { resolve, join } from 'path';
 
 import App from './src/app';
@@ -74,6 +75,7 @@ module.exports = {
       baseFilename: 'default.html',
     }),
     new SitemapPlugin('https://smartadviser.co.uk', paths),
+    new FaviconsWebpackPlugin(),
   ],
   devServer: {
     contentBase: join(__dirname, 'dist'),
