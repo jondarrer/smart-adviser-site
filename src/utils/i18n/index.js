@@ -30,6 +30,8 @@ i18n
           'meta-keywords':
             'Accountants in Milton Keynes,Romanian Accountants,self-employment services,limited company services,payroll services,PAYE registration,tax advice,tax preparation,company formation,online company formation,tax advisor,cheap Accountant in Milton Keynes,preparation of VAT return,preparation of tax return,benefits',
           'site-name': 'smartadviser.co.uk',
+          'copyright-notice':
+            '© 2020 Smart Adviser Ltd, all rights reserved | Company No. 11519911 | Registered in England & Wales.',
         },
       },
       ro: {
@@ -47,6 +49,8 @@ i18n
           'meta-keywords':
             'Contabili din Milton Keynes, Contabili români, servicii de angajare independentă, servicii companie limitată, servicii de salarizare, înregistrare PAYE, consultanță fiscală, pregătire fiscală, formare companie, formare companie online, consilier fiscal, contabil ieftin în Milton Keynes, pregătirea returului de TVA, întocmirea declarației fiscale, beneficii',
           'site-name': 'smartadviser.co.uk/ro',
+          'copyright-notice':
+            '© 2020 Smart Adviser Ltd, toate drepturile rezervate | Nr. Companie 11519911 | Înregistrat în Anglia și Țara Galilor.',
         },
       },
     },

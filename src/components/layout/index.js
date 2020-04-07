@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Navbar, LanguageSwitcher } from '../';
+import { Navbar, LanguageSwitcher, Footer } from '../';
 import HeaderSection from './header-section';
 import ContentSection from './content-section';
 import FooterSection from './footer-section';
@@ -8,11 +8,13 @@ import FooterSection from './footer-section';
 const Layout = ({ children }) => (
   <>
     <HeaderSection>
-      <LanguageSwitcher languages={['en', 'ro']} />
       <Navbar />
+      <LanguageSwitcher languages={['en', 'ro']} />
     </HeaderSection>
     <ContentSection>{children}</ContentSection>
-    <FooterSection></FooterSection>
+    <FooterSection>
+      <Footer />
+    </FooterSection>
   </>
 );
 
