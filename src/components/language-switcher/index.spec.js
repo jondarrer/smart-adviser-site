@@ -4,8 +4,7 @@ import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 
 import LanguageSwitcher from './';
-import LanguageContext from '../language-context';
-import '../i18n';
+import { i18n as _utils, LanguageContext } from '../../utils';
 
 describe('LanguageSwitcher', () => {
   it('should produce non-link for current language (en) and a link to the ro version of the page', () => {

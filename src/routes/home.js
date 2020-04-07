@@ -3,8 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 
-import { LanguageContext } from '../components';
-import { getLanguageForLocale } from '../utils';
+import { getLanguageForLocale, LanguageContext } from '../utils';
 
 const Home = ({ locales }) => {
   const lng = React.useContext(LanguageContext);

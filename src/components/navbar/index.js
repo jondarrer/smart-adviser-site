@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-import { LanguageContext } from '../../components';
+import { LanguageContext } from '../../utils';
 
 const Navbar = () => {
   const lng = React.useContext(LanguageContext);

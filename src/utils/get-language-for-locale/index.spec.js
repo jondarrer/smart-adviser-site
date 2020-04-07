@@ -1,5 +1,5 @@
 /* global describe it expect */
-import getLanguageForLocale from './get-language-for-locale';
+import getLanguageForLocale from './';
 
 describe('getLanguageForLocale', () => {
   it('should return ro for ro', () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-import LanguageContext from '../../components/language-context';
+import { LanguageContext } from '../../utils';
 
 const LanguageSwitcher = ({ languages }) => {
   const lng = React.useContext(LanguageContext);

@@ -3,7 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from 'theme-ui';
 
 import { Home, About } from './routes';
-import { LanguageContext, i18n, Navbar, LanguageSwitcher } from './components';
+import { Navbar, LanguageSwitcher } from './components';
+import { LanguageContext, i18n } from './utils';
 import theme from './theme';
 
 const locales = ['ro', 'en-gb'];
