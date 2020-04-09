@@ -22,6 +22,11 @@ describe('LanguageSwitcher', () => {
         <li>
           <span>
             EN
+            <img
+              className="css-9taffg"
+              src="/images/en.png"
+              width="24px"
+            />
           </span>
         </li>
         <li>
@@ -30,6 +35,11 @@ describe('LanguageSwitcher', () => {
             onClick={[Function]}
           >
             RO
+            <img
+              className="css-9taffg"
+              src="/images/ro.png"
+              width="24px"
+            />
           </a>
         </li>
       </ul>

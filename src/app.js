@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from 'theme-ui';
 
-import { Home, About } from './routes';
+import { Home, About, Attributions } from './routes';
 import { Layout } from './components';
 import { LanguageContext, i18n } from './utils';
 import theme from './theme';
@@ -23,6 +23,13 @@ const App = () => (
         <LanguageContext.Provider value="en">
           <Layout>
             <About locales={locales} />
+          </Layout>
+        </LanguageContext.Provider>
+      </Route>
+      <Route path="/attributions">
+        <LanguageContext.Provider value="en">
+          <Layout>
+            <Attributions locales={locales} />
           </Layout>
         </LanguageContext.Provider>
       </Route>

@@ -1,4 +1,3 @@
-import Home from './home';
-import About from './about';
-
-export { Home, About };
+export { default as Home } from './home';
+export { default as About } from './about';
+export { default as Attributions } from './attributions';

@@ -9,6 +9,10 @@
         "destination": "/__about.html"
       },
       {
+        "source": "/attributions",
+        "destination": "/__attributions.html"
+      },
+      {
         "source": "/ro",
         "destination": "/__ro.html"
       },

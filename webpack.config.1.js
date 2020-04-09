@@ -2,7 +2,8 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ReactStaticSiteHydrater from 'react-static-site-hydrater';
 import SitemapPlugin from 'sitemap-webpack-plugin';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
-import { resolve, join } from 'path';
+import CopyPlugin from 'copy-webpack-plugin';
+import { resolve } from 'path';
 
 import App from './src/app';
 
@@ -32,6 +33,12 @@ const paths = [
     changefreq: 'daily',
   },
   {
+    path: '/attributions',
+    lastmod,
+    priority: '0.2',
+    changefreq: 'daily',
+  },
+  {
     path: '/ro',
     lastmod,
     priority: '0.8',
@@ -48,7 +55,7 @@ const paths = [
 const routes = paths.map((path) => path.path);
 
 module.exports = {
-  entry: resolve(__dirname, './src'),
+  entry: resolve(__dirname, 'src'),
   output: {
     path: resolve(__dirname, 'dist'),
     publicPath: '/',
@@ -76,9 +83,10 @@ module.exports = {
     }),
     new SitemapPlugin('https://smartadviser.co.uk', paths),
     new FaviconsWebpackPlugin(),
+    new CopyPlugin([{ from: 'src/images', to: 'images' }]),
   ],
   devServer: {
-    contentBase: join(__dirname, 'dist'),
+    contentBase: resolve(__dirname, 'dist'),
     compress: true,
     port: 9000,
     historyApiFallback: {
