@@ -24,6 +24,9 @@ i18n
             '© 2020 Smart Adviser Ltd, all rights reserved | Company No. 11519911 | Registered in England & Wales.',
           'if-you-would-like-us-to-contact-you':
             'If you would like us to contact you please leave us the following details:',
+          'business-name': 'Smart Adviser Ltd',
+          'business-description': 'Accounting services in UK',
+          strapline: 'We are here to support your business!',
         },
         meta: {
           'meta-description-home':
@@ -40,12 +43,14 @@ i18n
           '/ro/despre': '/about',
         },
         heading: {
+          'online-services': 'Online services',
           'self-employment': 'Self-employment',
           'limited-companies': 'Limited Companies',
           benefits: 'Benefits',
           'other-services': 'Other services',
         },
         service: {
+          'safe-fast-efficient': 'Safe, fast, efficient, no time wasted',
           'tax-return': 'Tax Return - £100',
           'registered-as-self-employed': 'Registered as self-employed - £50',
           'registered-in-cis': 'Registered in CIS - £30',
@@ -87,6 +92,9 @@ i18n
             '© 2020 Smart Adviser Ltd, toate drepturile rezervate | Nr. Companie 11519911 | Înregistrat în Anglia și Țara Galilor.',
           'if-you-would-like-us-to-contact-you':
             'Daca doriti sa fiti contactat, va rugam sa lasati urmatoarele detalii:',
+          'business-name': 'Smart Adviser Ltd',
+          'business-description': 'Servicii Contabilitate in UK',
+          strapline: 'Suntem aici pentru a-ti sprijini afacerea!',
         },
         meta: {
           'meta-description-home':
@@ -103,12 +111,14 @@ i18n
           '/ro/despre': '/ro/despre',
         },
         heading: {
+          'online-services': 'Servicii Online',
           'self-employment': 'Self-employment',
           'limited-companies': 'Companii',
           benefits: 'Beneficii',
           'other-services': 'Alte servicii',
         },
         service: {
+          'safe-fast-efficient': 'Sigur, rapid, eficient, fara timp pierdut',
           'tax-return': 'Declaratia fiscala - 100 GBP',
           'registered-as-self-employed':
             'Inregistrare ca self-employed - 50 GBP',

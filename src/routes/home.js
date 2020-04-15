@@ -34,16 +34,29 @@ const Home = ({ locales }) => {
         />
         <meta name="keywords" content={t('meta:meta-keywords', { lng })} />
       </Helmet>
-      <h1>
-        {t('Home', { lng })} ({lng})
-      </h1>
+      <h1>{t('business-name', { lng })}</h1>
+      <h2>{t('business-description', { lng })}</h2>
+      <h3>{t('strapline', { lng })}</h3>
+      <h4>{t('heading:online-services', { lng })}</h4>
+      <p>{t('service:safe-fast-efficient', { lng })}</p>
       <div>
-        <h2>{t('heading:self-employment', { lng })}</h2>
-        <h2>{t('heading:limited-companies', { lng })}</h2>
-        <h2>{t('heading:benefits', { lng })}</h2>
-        <h2>{t('heading:other-services', { lng })}</h2>
+        <h4>
+          <a href="#self-employment">{t('heading:self-employment', { lng })}</a>
+        </h4>
+        <h4>
+          <a href="#limited-companies">
+            {t('heading:limited-companies', { lng })}
+          </a>
+        </h4>
+        <h4>
+          <a href="#benefits">{t('heading:benefits', { lng })}</a>
+        </h4>
+        <h4>
+          <a href="#other-services">{t('heading:other-services', { lng })}</a>
+        </h4>
         <ServiceDescription
           title="heading:self-employment"
+          id="self-employment"
           subServices={[
             'service:tax-return',
             'service:registered-as-self-employed',
@@ -54,6 +67,7 @@ const Home = ({ locales }) => {
         ></ServiceDescription>
         <ServiceDescription
           title="heading:limited-companies"
+          id="limited-companies"
           subServices={[
             'service:set-up-a-company',
             'service:strike-off-a-company',
@@ -67,6 +81,7 @@ const Home = ({ locales }) => {
         ></ServiceDescription>
         <ServiceDescription
           title="heading:benefits"
+          id="benefits"
           subServices={[
             'service:universal-credits',
             'service:child-benefit',
@@ -75,6 +90,7 @@ const Home = ({ locales }) => {
         ></ServiceDescription>
         <ServiceDescription
           title="heading:other-services"
+          id="other-services"
           subServices={[
             'service:cv',
             'service:complete-different-forms',

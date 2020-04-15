@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import { LanguageContext } from '../../utils';
 
-const ServiceDescription = ({ title, subServices }) => {
+const ServiceDescription = ({ title, subServices, ...rest }) => {
   const lng = React.useContext(LanguageContext);
   const { t, i18n } = useTranslation();
 
@@ -14,6 +14,7 @@ const ServiceDescription = ({ title, subServices }) => {
       sx={{
         maxWidth: '1100px',
       }}
+      {...rest}
     >
       <h2>{t(title, { lng })}</h2>
       <ul>
