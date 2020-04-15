@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 
+import { ServiceDescription } from '../components';
 import { getLanguageForLocale, LanguageContext } from '../utils';
 
 const Home = ({ locales }) => {
@@ -41,6 +42,45 @@ const Home = ({ locales }) => {
         <h2>{t('heading:limited-companies', { lng })}</h2>
         <h2>{t('heading:benefits', { lng })}</h2>
         <h2>{t('heading:other-services', { lng })}</h2>
+        <ServiceDescription
+          title="heading:self-employment"
+          subServices={[
+            'service:tax-return',
+            'service:registered-as-self-employed',
+            'service:registered-in-cis',
+            'service:penalty-appeal',
+            'service:employment-history',
+          ]}
+        ></ServiceDescription>
+        <ServiceDescription
+          title="heading:limited-companies"
+          subServices={[
+            'service:set-up-a-company',
+            'service:strike-off-a-company',
+            'service:company-tax-return',
+            'service:bookkeeping',
+            'service:cis-vat-paye-reg',
+            'service:vat-return',
+            'service:paye',
+            'service:cis-monthly-returns',
+          ]}
+        ></ServiceDescription>
+        <ServiceDescription
+          title="heading:benefits"
+          subServices={[
+            'service:universal-credits',
+            'service:child-benefit',
+            'service:maternity-allowance',
+          ]}
+        ></ServiceDescription>
+        <ServiceDescription
+          title="heading:other-services"
+          subServices={[
+            'service:cv',
+            'service:complete-different-forms',
+            'service:equivalent-uk-qualifications',
+          ]}
+        ></ServiceDescription>
       </div>
     </>
   );
