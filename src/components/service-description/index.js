@@ -17,8 +17,8 @@ const ServiceDescription = ({ title, subServices }) => {
     >
       <h2>{t(title, { lng })}</h2>
       <ul>
-        {subServices.map((subService) => (
-          <li>{t(subService, { lng })}</li>
+        {subServices.map((subService, index) => (
+          <li key={index}>{t(subService, { lng })}</li>
         ))}
       </ul>
     </Box>

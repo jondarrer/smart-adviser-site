@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 
-import { ServiceDescription } from '../components';
+import { ServiceDescription, ContactForm } from '../components';
 import { getLanguageForLocale, LanguageContext } from '../utils';
 
 const Home = ({ locales }) => {
@@ -81,6 +81,7 @@ const Home = ({ locales }) => {
             'service:equivalent-uk-qualifications',
           ]}
         ></ServiceDescription>
+        <ContactForm />
       </div>
     </>
   );

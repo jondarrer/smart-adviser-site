@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/jondarrer/smart-adviser-site#readme",
   "dependencies": {
+    "formik": "^2.1.4",
     "i18next": "^19.3.4",
     "react-helmet-async": "^1.0.4",
     "react-i18next": "^11.3.4",

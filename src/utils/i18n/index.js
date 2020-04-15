@@ -22,6 +22,8 @@ i18n
           'site-name': 'smartadviser.co.uk',
           'copyright-notice':
             '© 2020 Smart Adviser Ltd, all rights reserved | Company No. 11519911 | Registered in England & Wales.',
+          'if-you-would-like-us-to-contact-you':
+            'If you would like us to contact you please leave us the following details:',
         },
         meta: {
           'meta-description-home':
@@ -64,6 +66,17 @@ i18n
           'complete-different-forms': 'Complete different forms',
           'equivalent-uk-qualifications': 'Equivalent UK qualifications',
         },
+        'form-label': {
+          name: 'Name:',
+          phone: 'Telephone No:',
+          email: 'Email:',
+          comment: 'Please tell us your enquiry',
+          submit: 'Submit',
+        },
+        'form-error': {
+          required: 'Required',
+          'invalid-email-address': 'Invalid email address',
+        },
       },
       ro: {
         translation: {
@@ -72,6 +85,8 @@ i18n
           'site-name': 'smartadviser.co.uk/ro',
           'copyright-notice':
             '© 2020 Smart Adviser Ltd, toate drepturile rezervate | Nr. Companie 11519911 | Înregistrat în Anglia și Țara Galilor.',
+          'if-you-would-like-us-to-contact-you':
+            'Daca doriti sa fiti contactat, va rugam sa lasati urmatoarele detalii:',
         },
         meta: {
           'meta-description-home':
@@ -115,6 +130,17 @@ i18n
           cv: 'CV (Curriculum Vitae)',
           'complete-different-forms': 'Completari formulare diverse',
           'equivalent-uk-qualifications': 'Echivalare studii prin UK Naric',
+        },
+        'form-label': {
+          name: 'Numele:',
+          phone: 'Nr. Telefon:',
+          email: 'E-mail:',
+          comment: 'Va rugam sa ne comunicati cerinta dvs.',
+          submit: 'Trimite',
+        },
+        'form-error': {
+          required: 'Necesar',
+          'invalid-email-address': 'Adresa email invalida',
         },
       },
     },
