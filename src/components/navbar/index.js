@@ -12,10 +12,10 @@ const Navbar = () => {
     <nav>
       <ul>
         <li>
-          <Link to={t('/', { lng })}>{t('Home', { lng })}</Link>
+          <Link to={t('nav:/', { lng })}>{t('Home', { lng })}</Link>
         </li>
         <li>
-          <Link to={t('/about', { lng })}>{t('About', { lng })}</Link>
+          <Link to={t('nav:/about', { lng })}>{t('About', { lng })}</Link>
         </li>
       </ul>
     </nav>

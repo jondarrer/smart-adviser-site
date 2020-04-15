@@ -25,7 +25,7 @@ const LanguageSwitcher = ({ languages }) => {
               <Image src={`/images/${language}.png`} width="24px" />
             </span>
           ) : (
-            <Link to={t(location.pathname, { lng: language })}>
+            <Link to={t(`nav:${location.pathname}`, { lng: language })}>
               {language.toUpperCase()}
               <Image src={`/images/${language}.png`} width="24px" />
             </Link>

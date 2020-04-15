@@ -29,13 +29,19 @@ const Home = ({ locales }) => {
         ))}
         <meta
           name="description"
-          content={t('meta-description-home', { lng })}
+          content={t('meta:meta-description-home', { lng })}
         />
-        <meta name="keywords" content={t('meta-keywords', { lng })} />
+        <meta name="keywords" content={t('meta:meta-keywords', { lng })} />
       </Helmet>
       <h1>
         {t('Home', { lng })} ({lng})
       </h1>
+      <div>
+        <h2>{t('heading:self-employment', { lng })}</h2>
+        <h2>{t('heading:limited-companies', { lng })}</h2>
+        <h2>{t('heading:benefits', { lng })}</h2>
+        <h2>{t('heading:other-services', { lng })}</h2>
+      </div>
     </>
   );
 };
