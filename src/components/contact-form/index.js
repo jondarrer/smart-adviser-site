@@ -6,7 +6,7 @@ import fetch from 'unfetch';
 
 import { LanguageContext } from '../../utils';
 
-const ContactForm = ({ id }) => {
+const ContactForm = ({ formEndpoint, id }) => {
   const lng = React.useContext(LanguageContext);
   const { t, i18n } = useTranslation();
   const [response, setResponse] = useState({
@@ -42,7 +42,7 @@ const ContactForm = ({ id }) => {
         }}
         onSubmit={(values, { setSubmitting, resetForm }) => {
           setTimeout(() => {
-            fetch('https://app.99inbound.com/api/e/091MZdt8', {
+            fetch(formEndpoint, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

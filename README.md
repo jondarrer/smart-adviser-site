@@ -12,6 +12,10 @@ npm i
 
 ### Run locally
 
+The form within the application relies on the `FORM_ENDPOINT` environment
+variable to link to
+[99inbound](https://docs.99inbound.com/form-endpoints/installation/).
+
 ```bash
 npm start
 ```

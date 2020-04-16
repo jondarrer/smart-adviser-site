@@ -15,7 +15,7 @@ const App = () => (
       <Route path="/" exact>
         <LanguageContext.Provider value="en">
           <Layout>
-            <Home locales={locales} />
+            <Home locales={locales} formEndpoint={FORM_ENDPOINT} />
           </Layout>
         </LanguageContext.Provider>
       </Route>
@@ -36,7 +36,7 @@ const App = () => (
       <Route path="/ro" exact>
         <LanguageContext.Provider value="ro">
           <Layout>
-            <Home locales={locales} />
+            <Home locales={locales} formEndpoint={FORM_ENDPOINT} />
           </Layout>
         </LanguageContext.Provider>
       </Route>

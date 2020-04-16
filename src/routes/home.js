@@ -7,7 +7,7 @@ import { Box, Grid, Heading, Link } from 'theme-ui';
 import { ServiceDescription, ContactForm } from '../components';
 import { getLanguageForLocale, LanguageContext } from '../utils';
 
-const Home = ({ locales }) => {
+const Home = ({ locales, formEndpoint }) => {
   const lng = React.useContext(LanguageContext);
   const { t, i18n } = useTranslation();
   const location = useLocation();
@@ -112,7 +112,7 @@ const Home = ({ locales }) => {
           ]}
         ></ServiceDescription>
       </Grid>
-      <ContactForm id="contact-form" />
+      <ContactForm formEndpoint={formEndpoint} id="contact-form" />
     </>
   );
 };
