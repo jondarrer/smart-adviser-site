@@ -18,31 +18,25 @@ describe('LanguageSwitcher', () => {
       )
       .toJSON();
     expect(sut).toMatchInlineSnapshot(`
-      <ul>
-        <li>
-          <span>
-            EN
-            <img
-              className="css-9taffg"
-              src="/images/en.png"
-              width="24px"
-            />
-          </span>
-        </li>
-        <li>
+      <div
+        className="css-4cffwv"
+      >
+        <span />
+        <button
+          className="css-17qau8q"
+        >
           <a
             href="/ro/despre"
             onClick={[Function]}
           >
-            RO
             <img
               className="css-9taffg"
               src="/images/ro.png"
               width="24px"
             />
           </a>
-        </li>
-      </ul>
+        </button>
+      </div>
     `);
   });
 });

@@ -14,7 +14,7 @@ const LanguageSwitcher = ({ languages }) => {
     <Flex>
       {languages.map((language, index) => {
         return language === lng ? (
-          <span />
+          <span key={index} />
         ) : (
           <IconButton key={index} m={1}>
             <Link to={t(`nav:${location.pathname}`, { lng: language })}>
