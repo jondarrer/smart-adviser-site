@@ -1,14 +1,9 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Image } from 'theme-ui';
+import { Flex, IconButton, Image } from 'theme-ui';
 
 import { LanguageContext } from '../../utils';
-
-// import enFlag from '../../images/en.png';
-// import roFlag from '../../images/ro.png';
-
-// const flags = { enFlag, roFlag };
 
 const LanguageSwitcher = ({ languages }) => {
   const lng = React.useContext(LanguageContext);
@@ -16,23 +11,19 @@ const LanguageSwitcher = ({ languages }) => {
   const location = useLocation();
 
   return (
-    <ul>
+    <Flex>
       {languages.map((language, index) => {
-        const comp =
-          language === lng ? (
-            <span>
-              {language.toUpperCase()}
-              <Image src={`/images/${language}.png`} width="24px" />
-            </span>
-          ) : (
+        return language === lng ? (
+          <span />
+        ) : (
+          <IconButton key={index} m={1}>
             <Link to={t(`nav:${location.pathname}`, { lng: language })}>
-              {language.toUpperCase()}
               <Image src={`/images/${language}.png`} width="24px" />
             </Link>
-          );
-        return <li key={index}>{comp}</li>;
+          </IconButton>
+        );
       })}
-    </ul>
+    </Flex>
   );
 };
 

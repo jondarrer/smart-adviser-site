@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Flex, NavLink } from 'theme-ui';
 
 import { LanguageContext } from '../../utils';
 
@@ -9,16 +10,14 @@ const Navbar = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to={t('nav:/', { lng })}>{t('Home', { lng })}</Link>
-        </li>
-        <li>
-          <Link to={t('nav:/about', { lng })}>{t('About', { lng })}</Link>
-        </li>
-      </ul>
-    </nav>
+    <Flex as="nav">
+      <NavLink as={Link} to={t('nav:/', { lng })} p={2}>
+        {t('Home', { lng })}
+      </NavLink>
+      <NavLink as={Link} to={t('nav:/about', { lng })} p={2}>
+        {t('About', { lng })}
+      </NavLink>
+    </Flex>
   );
 };
 
