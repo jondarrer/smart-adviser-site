@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik } from 'formik';
-import { Box, Button, Label, Input, Textarea, jsx } from 'theme-ui';
+import { Box, Button, Input, Label, Message, Textarea } from 'theme-ui';
 import { useTranslation } from 'react-i18next';
 import fetch from 'unfetch';
 
@@ -9,6 +9,7 @@ import { LanguageContext } from '../../utils';
 const ContactForm = () => {
   const lng = React.useContext(LanguageContext);
   const { t, i18n } = useTranslation();
+  const [response, setResponse] = useState({ isError: false, message: '' });
 
   return (
     <Box>
@@ -36,7 +37,7 @@ const ContactForm = () => {
           }
           return errors;
         }}
-        onSubmit={(values, { setSubmitting }) => {
+        onSubmit={(values, { setSubmitting, resetForm }) => {
           setTimeout(() => {
             fetch('https://app.99inbound.com/api/e/091MZdt8', {
               method: 'POST',
@@ -53,10 +54,16 @@ const ContactForm = () => {
                 console.log(response);
                 if (response.error) {
                   // Show the error
+                  setResponse({ isError: true, message: response.error });
+                  setSubmitting(false);
                 } else {
                   // Show the confirmation dialog
+                  setResponse({
+                    isError: false,
+                    message: response.submission_text,
+                  });
+                  resetForm();
                 }
-                setSubmitting(false);
               });
           }, 400);
         }}
@@ -71,6 +78,9 @@ const ContactForm = () => {
           isSubmitting,
         }) => (
           <Box as="form" onSubmit={handleSubmit} my="3">
+            {response.message && (
+              <Message my="3">{t(response.message, { lng })}</Message>
+            )}
             <Box sx={{ position: 'absolute', left: '-5000px' }}>
               <Input
                 type="checkbox"

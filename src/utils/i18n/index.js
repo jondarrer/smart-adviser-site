@@ -82,6 +82,9 @@ i18n
           required: 'Required',
           'invalid-email-address': 'Invalid email address',
         },
+        'form-response': {
+          'thank-you': "Thank you, we'll be in touch with you shortly.",
+        },
       },
       ro: {
         translation: {
@@ -151,6 +154,9 @@ i18n
         'form-error': {
           required: 'Necesar',
           'invalid-email-address': 'Adresa email invalida',
+        },
+        'form-response': {
+          'thank-you': 'Vă mulțumim, în curând vom fi în legătură cu dvs.',
         },
       },
     },
