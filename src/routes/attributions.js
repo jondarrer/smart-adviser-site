@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
+import { Box, Heading, Link } from 'theme-ui';
 
 import { getLanguageForLocale, LanguageContext } from '../utils';
 
@@ -33,19 +34,19 @@ const Attributions = ({ locales }) => {
         />
         <meta name="keywords" content={t('meta-keywords', { lng })} />
       </Helmet>
-      <h1>
+      <Heading as="h1">
         {t('Attributions', { lng })} ({lng})
-      </h1>
-      <p>
+      </Heading>
+      <Box as="p">
         Icons made by{' '}
-        <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
+        <Link href="https://www.flaticon.com/authors/freepik" title="Freepik">
           Freepik
-        </a>{' '}
+        </Link>{' '}
         from{' '}
-        <a href="https://www.flaticon.com/" title="Flaticon">
+        <Link href="https://www.flaticon.com/" title="Flaticon">
           www.flaticon.com
-        </a>
-      </p>
+        </Link>
+      </Box>
     </>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Flex, IconButton, Image } from 'theme-ui';
+import { Box, Flex, IconButton, Image } from 'theme-ui';
 
 import { LanguageContext } from '../../utils';
 
@@ -14,7 +14,7 @@ const LanguageSwitcher = ({ languages }) => {
     <Flex>
       {languages.map((language, index) => {
         return language === lng ? (
-          <span key={index} />
+          <Box as="span" key={index} />
         ) : (
           <IconButton key={index} m={1}>
             <Link to={t(`nav:${location.pathname}`, { lng: language })}>

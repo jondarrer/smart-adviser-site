@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
+import { Box, Heading, Link } from 'theme-ui';
 
 import { ServiceDescription, ContactForm } from '../components';
 import { getLanguageForLocale, LanguageContext } from '../utils';
@@ -34,26 +35,30 @@ const Home = ({ locales }) => {
         />
         <meta name="keywords" content={t('meta:meta-keywords', { lng })} />
       </Helmet>
-      <h1>{t('business-name', { lng })}</h1>
-      <h2>{t('business-description', { lng })}</h2>
-      <h3>{t('strapline', { lng })}</h3>
-      <h4>{t('heading:online-services', { lng })}</h4>
-      <p>{t('service:safe-fast-efficient', { lng })}</p>
-      <div>
-        <h4>
-          <a href="#self-employment">{t('heading:self-employment', { lng })}</a>
-        </h4>
-        <h4>
-          <a href="#limited-companies">
+      <Heading as="h1">{t('business-name', { lng })}</Heading>
+      <Heading as="h2">{t('business-description', { lng })}</Heading>
+      <Heading as="h3">{t('strapline', { lng })}</Heading>
+      <Heading as="h4">{t('heading:online-services', { lng })}</Heading>
+      <Box as="p">{t('service:safe-fast-efficient', { lng })}</Box>
+      <Box>
+        <Heading as="h4">
+          <Link href="#self-employment">
+            {t('heading:self-employment', { lng })}
+          </Link>
+        </Heading>
+        <Heading as="h4">
+          <Link href="#limited-companies">
             {t('heading:limited-companies', { lng })}
-          </a>
-        </h4>
-        <h4>
-          <a href="#benefits">{t('heading:benefits', { lng })}</a>
-        </h4>
-        <h4>
-          <a href="#other-services">{t('heading:other-services', { lng })}</a>
-        </h4>
+          </Link>
+        </Heading>
+        <Heading as="h4">
+          <Link href="#benefits">{t('heading:benefits', { lng })}</Link>
+        </Heading>
+        <Heading as="h4">
+          <Link href="#other-services">
+            {t('heading:other-services', { lng })}
+          </Link>
+        </Heading>
         <ServiceDescription
           title="heading:self-employment"
           id="self-employment"
@@ -98,7 +103,7 @@ const Home = ({ locales }) => {
           ]}
         ></ServiceDescription>
         <ContactForm />
-      </div>
+      </Box>
     </>
   );
 };

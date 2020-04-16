@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
+import { Heading } from 'theme-ui';
 
 import { getLanguageForLocale, LanguageContext } from '../utils';
 
@@ -33,9 +34,9 @@ const About = ({ locales }) => {
         />
         <meta name="keywords" content={t('meta:meta-keywords', { lng })} />
       </Helmet>
-      <h1>
+      <Heading as="h1">
         {t('About', { lng })} ({lng})
-      </h1>
+      </Heading>
     </>
   );
 };

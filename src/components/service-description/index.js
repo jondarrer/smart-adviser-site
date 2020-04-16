@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from 'react';
-import { Box, jsx } from 'theme-ui';
+import { Box, Heading, jsx } from 'theme-ui';
 import { useTranslation } from 'react-i18next';
 
 import { LanguageContext } from '../../utils';
@@ -16,12 +16,14 @@ const ServiceDescription = ({ title, subServices, ...rest }) => {
       }}
       {...rest}
     >
-      <h2>{t(title, { lng })}</h2>
-      <ul>
+      <Heading as="h2">{t(title, { lng })}</Heading>
+      <Box as="ul">
         {subServices.map((subService, index) => (
-          <li key={index}>{t(subService, { lng })}</li>
+          <Box as="li" key={index}>
+            {t(subService, { lng })}
+          </Box>
         ))}
-      </ul>
+      </Box>
     </Box>
   );
 };
