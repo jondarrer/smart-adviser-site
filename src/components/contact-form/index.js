@@ -6,13 +6,16 @@ import fetch from 'unfetch';
 
 import { LanguageContext } from '../../utils';
 
-const ContactForm = () => {
+const ContactForm = ({ id }) => {
   const lng = React.useContext(LanguageContext);
   const { t, i18n } = useTranslation();
-  const [response, setResponse] = useState({ isError: false, message: '' });
+  const [response, setResponse] = useState({
+    isError: false,
+    message: '',
+  });
 
   return (
-    <Box>
+    <Box id={id}>
       <Box as="h2">{t('if-you-would-like-us-to-contact-you', { lng })}</Box>
       <Formik
         initialValues={{

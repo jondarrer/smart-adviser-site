@@ -48,6 +48,7 @@ i18n
           'limited-companies': 'Limited Companies',
           benefits: 'Benefits',
           'other-services': 'Other services',
+          'service-request': 'Request service',
         },
         service: {
           'safe-fast-efficient': 'Safe, fast, efficient, no time wasted',
@@ -119,6 +120,7 @@ i18n
           'limited-companies': 'Companii',
           benefits: 'Beneficii',
           'other-services': 'Alte servicii',
+          'service-request': 'Serviciul solicitat',
         },
         service: {
           'safe-fast-efficient': 'Sigur, rapid, eficient, fara timp pierdut',

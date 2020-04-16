@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import { LanguageContext } from '../../utils';
 
-const ServiceDescription = ({ title, subServices, ...rest }) => {
+const ServiceDescription = ({ title, subServices, sx, ...rest }) => {
   const lng = React.useContext(LanguageContext);
   const { t, i18n } = useTranslation();
 
@@ -13,6 +13,7 @@ const ServiceDescription = ({ title, subServices, ...rest }) => {
     <Box
       sx={{
         maxWidth: '1100px',
+        ...sx,
       }}
       {...rest}
     >

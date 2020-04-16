@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
-import { Box, Heading, Link } from 'theme-ui';
+import { Box, Grid, Heading, Link } from 'theme-ui';
 
 import { ServiceDescription, ContactForm } from '../components';
 import { getLanguageForLocale, LanguageContext } from '../utils';
@@ -59,6 +59,13 @@ const Home = ({ locales }) => {
             {t('heading:other-services', { lng })}
           </Link>
         </Heading>
+        <Heading as="h4">
+          <Link href="#contact-form">
+            {t('heading:service-request', { lng })}
+          </Link>
+        </Heading>
+      </Box>
+      <Grid gap={2} columns={[1, 2]}>
         <ServiceDescription
           title="heading:self-employment"
           id="self-employment"
@@ -69,6 +76,7 @@ const Home = ({ locales }) => {
             'service:penalty-appeal',
             'service:employment-history',
           ]}
+          sx={{ bg: ['muted', 'background'] }}
         ></ServiceDescription>
         <ServiceDescription
           title="heading:limited-companies"
@@ -92,6 +100,7 @@ const Home = ({ locales }) => {
             'service:child-benefit',
             'service:maternity-allowance',
           ]}
+          sx={{ bg: ['muted', 'background'] }}
         ></ServiceDescription>
         <ServiceDescription
           title="heading:other-services"
@@ -102,8 +111,8 @@ const Home = ({ locales }) => {
             'service:equivalent-uk-qualifications',
           ]}
         ></ServiceDescription>
-        <ContactForm />
-      </Box>
+      </Grid>
+      <ContactForm id="contact-form" />
     </>
   );
 };
