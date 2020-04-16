@@ -122,5 +122,6 @@ export default {
     img: {
       maxWidth: '100%',
     },
+    navlink: {},
   },
 };

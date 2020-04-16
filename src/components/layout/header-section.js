@@ -6,10 +6,11 @@ const HeaderSection = ({ children }) => (
   <Flex
     as="header"
     sx={{
-      justifyContent: 'center',
+      alignItems: 'center',
+      variant: 'styles.header',
     }}
     bg="gray"
-    px={['2', '4']}
+    px={['3', '4']}
   >
     {children}
   </Flex>
