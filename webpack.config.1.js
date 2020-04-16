@@ -6,7 +6,6 @@ import CopyPlugin from 'copy-webpack-plugin';
 import { resolve } from 'path';
 
 import App from './src/app';
-import webpack from 'webpack';
 
 const pad = (n, width, z) => {
   z = z || '0';
@@ -77,17 +76,14 @@ module.exports = {
       filename: 'default.html',
       scriptLoading: 'defer',
     }),
+    new SitemapPlugin('https://smartadviser.co.uk', paths),
+    new FaviconsWebpackPlugin(),
     new ReactStaticSiteHydrater({
       routes,
       component: App,
       baseFilename: 'default.html',
     }),
-    new SitemapPlugin('https://smartadviser.co.uk', paths),
-    new FaviconsWebpackPlugin(),
     new CopyPlugin([{ from: 'src/images', to: 'images' }]),
-    new webpack.DefinePlugin({
-      FORM_ENDPOINT: JSON.stringify(process.env.FORM_ENDPOINT),
-    }),
   ],
   devServer: {
     contentBase: resolve(__dirname, 'dist'),
