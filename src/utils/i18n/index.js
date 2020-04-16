@@ -27,6 +27,8 @@ i18n
           'business-name': 'Smart Adviser Ltd',
           'business-description': 'Accounting services in UK',
           strapline: 'We are here to support your business!',
+          'phone-number': '07731 398854',
+          'phone-number-to-call': '+447731398854',
         },
         meta: {
           'meta-description-home':
@@ -99,6 +101,8 @@ i18n
           'business-name': 'Smart Adviser Ltd',
           'business-description': 'Servicii Contabilitate in UK',
           strapline: 'Suntem aici pentru a-ti sprijini afacerea!',
+          'phone-number': '+44 7731 398854',
+          'phone-number-to-call': '+447731398854',
         },
         meta: {
           'meta-description-home':

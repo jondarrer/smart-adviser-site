@@ -55,6 +55,22 @@ const Navbar = ({ open, setOpen }) => {
       >
         {t('About', { lng })}
       </NavLink>
+      <NavLink
+        as="a"
+        href={`tel:${t('phone-number-to-call', { lng })}`}
+        variant="styles.navlink"
+        p={2}
+        sx={{
+          zIndex: 2,
+        }}
+      >
+        <Box as="span" sx={{ display: ['inline-block', 'none'] }}>
+          Tel
+        </Box>
+        <Box as="span" sx={{ display: ['none', 'inline-block'] }}>
+          {t('phone-number', { lng })}
+        </Box>
+      </NavLink>
     </>
   );
 };
