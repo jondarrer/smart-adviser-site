@@ -21,7 +21,9 @@ describe('LanguageSwitcher', () => {
       <div
         className="css-4cffwv"
       >
-        <span />
+        <span
+          className="css-vurnku"
+        />
         <button
           className="css-17qau8q"
         >
