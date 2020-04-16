@@ -1,7 +1,9 @@
+/** @jsx jsx */
+/** @jsxFrag React.Fragment */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Box, NavLink } from 'theme-ui';
+import { Box, MenuButton, NavLink, jsx } from 'theme-ui';
 
 import { LanguageContext } from '../../utils';
 
@@ -11,6 +13,10 @@ const Navbar = () => {
 
   return (
     <>
+      <MenuButton
+        aria-label="Toggle Menu"
+        sx={{ display: ['inline-flex', 'none'] }}
+      />
       <NavLink
         as={Link}
         to={t('nav:/', { lng })}
