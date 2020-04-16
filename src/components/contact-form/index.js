@@ -45,12 +45,19 @@ const ContactForm = () => {
                 Accept: 'application/json',
               },
               body: JSON.stringify(values),
-            }).then((response) => {
-              // open(r.headers.get('location'));
-              console.log(response.json());
-            });
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
+            })
+              .then((response) => {
+                return response.json();
+              })
+              .then((response) => {
+                console.log(response);
+                if (response.error) {
+                  // Show the error
+                } else {
+                  // Show the confirmation dialog
+                }
+                setSubmitting(false);
+              });
           }, 400);
         }}
       >
