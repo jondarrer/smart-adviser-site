@@ -19,7 +19,7 @@ describe('LanguageSwitcher', () => {
       .toJSON();
     expect(sut).toMatchInlineSnapshot(`
       <div
-        className="css-4cffwv"
+        className="css-urkcus-LanguageSwitcher"
       >
         <span
           className="css-vurnku"
