@@ -8,7 +8,7 @@ const HeaderSection = ({ children }) => (
     sx={{
       justifyContent: 'center',
     }}
-    bg="primary"
+    bg="gray"
     px={['2', '4']}
   >
     {children}
