@@ -1,17 +1,18 @@
+/** @jsx jsx */
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Box, Flex, IconButton, Image } from 'theme-ui';
+import { Box, Flex, IconButton, Image, jsx } from 'theme-ui';
 
 import { LanguageContext } from '../../utils';
 
-const LanguageSwitcher = ({ languages }) => {
+const LanguageSwitcher = ({ languages, sx }) => {
   const lng = React.useContext(LanguageContext);
   const { t, i18n } = useTranslation();
   const location = useLocation();
 
   return (
-    <Flex>
+    <Flex sx={{ ...sx }}>
       {languages.map((language, index) => {
         return language === lng ? (
           <Box as="span" key={index} />

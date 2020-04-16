@@ -7,7 +7,9 @@ import { Box, MenuButton, NavLink, jsx } from 'theme-ui';
 
 import { LanguageContext } from '../../utils';
 
-const Navbar = () => {
+import SlideOutMenu from './slide-out-menu';
+
+const Navbar = ({ open, setOpen }) => {
   const lng = React.useContext(LanguageContext);
   const { t, i18n } = useTranslation();
 
@@ -15,13 +17,22 @@ const Navbar = () => {
     <>
       <MenuButton
         aria-label="Toggle Menu"
-        sx={{ display: ['inline-flex', 'none'] }}
+        sx={{
+          display: ['inline-flex', 'none'],
+          zIndex: 2,
+        }}
+        onClick={() => setOpen(!open)}
       />
+      <SlideOutMenu open={open} setOpen={setOpen} />
       <NavLink
         as={Link}
         to={t('nav:/', { lng })}
         variant="styles.navlink"
         p={2}
+        sx={{
+          zIndex: 2,
+        }}
+        onClick={() => setOpen(false)}
       >
         {t('Smart Adviser', { lng })}
       </NavLink>
@@ -31,6 +42,7 @@ const Navbar = () => {
         to={t('nav:/', { lng })}
         variant="styles.navlink"
         p={2}
+        sx={{ display: ['none', 'inline-block'] }}
       >
         {t('Home', { lng })}
       </NavLink>
@@ -39,6 +51,7 @@ const Navbar = () => {
         to={t('nav:/about', { lng })}
         variant="styles.navlink"
         p={2}
+        sx={{ display: ['none', 'inline-block'] }}
       >
         {t('About', { lng })}
       </NavLink>
