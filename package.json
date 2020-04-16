@@ -27,7 +27,8 @@
     "i18next": "^19.3.4",
     "react-helmet-async": "^1.0.4",
     "react-i18next": "^11.3.4",
-    "theme-ui": "^0.3.1"
+    "theme-ui": "^0.3.1",
+    "unfetch": "^4.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",

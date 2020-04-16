@@ -2,6 +2,7 @@ import React from 'react';
 import { Formik } from 'formik';
 import { Box, Button, Label, Input, Textarea, jsx } from 'theme-ui';
 import { useTranslation } from 'react-i18next';
+import fetch from 'unfetch';
 
 import { LanguageContext } from '../../utils';
 
@@ -13,7 +14,12 @@ const ContactForm = () => {
     <Box>
       <Box as="h2">{t('if-you-would-like-us-to-contact-you', { lng })}</Box>
       <Formik
-        initialValues={{ name: '', phone: '', email: '', comment: '' }}
+        initialValues={{
+          name: '',
+          phone: '',
+          email: '',
+          comment: '',
+        }}
         validate={(values) => {
           const errors = {};
           if (!values.email) {
@@ -32,6 +38,17 @@ const ContactForm = () => {
         }}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
+            fetch('https://app.99inbound.com/api/e/091MZdt8', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+              },
+              body: JSON.stringify(values),
+            }).then((response) => {
+              // open(r.headers.get('location'));
+              console.log(response.json());
+            });
             alert(JSON.stringify(values, null, 2));
             setSubmitting(false);
           }, 400);
@@ -47,6 +64,15 @@ const ContactForm = () => {
           isSubmitting,
         }) => (
           <Box as="form" onSubmit={handleSubmit} my="3">
+            <Box sx={{ position: 'absolute', left: '-5000px' }}>
+              <Input
+                type="checkbox"
+                name="liberal_ruby_checked_energy"
+                value="1"
+                tabindex="-1"
+                autocomplete="no"
+              />
+            </Box>
             <Label htmlFor="name">{t('form-label:name', { lng })} *</Label>
             <Input
               type="text"
