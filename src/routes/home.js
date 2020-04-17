@@ -35,27 +35,27 @@ const Home = ({ locales, formEndpoint }) => {
         />
         <meta name="keywords" content={t('meta:meta-keywords', { lng })} />
         <script type="application/ld+json">
-          {{
-            '@context': {
-              '@id': 'https://schema.org',
-              name: {
-                '@id': 'https://schema.org/name',
-                '@language': lng,
+          {`{
+            "@context": {
+              "@id": "https://schema.org",
+              "name": {
+                "@id": "https://schema.org/name",
+                "@language": "${lng}",
               },
-              url: {
-                '@id': 'https://schema.org/url',
-                '@language': lng,
+              "url": {
+                "@id": "https://schema.org/url",
+                "@language": "${lng}",
               },
             },
-            '@type': 'Organization',
-            url: `https://${t('site-name', { lng })}`,
-            name: t('business-name', { lng }),
-            contactPoint: {
-              '@type': 'ContactPoint',
-              telephone: t('phone-number-to-call', { lng }),
-              contactType: 'customer service',
+            "@type": "Organization",
+            "url": "https://${t('site-name', { lng })}",
+            "name": "${t('business-name', { lng })}",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "${t('phone-number-to-call', { lng })}",
+              "contactType": "customer service",
             },
-          }}
+          }`}
         </script>
       </Helmet>
       <Heading as="h1">{t('business-name', { lng })}</Heading>
