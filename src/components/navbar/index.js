@@ -34,7 +34,7 @@ const Navbar = ({ open, setOpen }) => {
         }}
         onClick={() => setOpen(false)}
       >
-        {t('Smart Adviser', { lng })}
+        {t('business-name', { lng })}
       </NavLink>
       <Box sx={{ mx: 'auto' }} />
       <NavLink
