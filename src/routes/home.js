@@ -64,29 +64,29 @@ const Home = ({ locales, formEndpoint }) => {
       <Heading as="h4">{t('heading:online-services', { lng })}</Heading>
       <Box as="p">{t('service:safe-fast-efficient', { lng })}</Box>
       <Box>
-        <Heading as="h4">
+        <Box as="p">
           <Link href="#self-employment">
             {t('heading:self-employment', { lng })}
           </Link>
-        </Heading>
-        <Heading as="h4">
+        </Box>
+        <Box as="p">
           <Link href="#limited-companies">
             {t('heading:limited-companies', { lng })}
           </Link>
-        </Heading>
-        <Heading as="h4">
+        </Box>
+        <Box as="p">
           <Link href="#benefits">{t('heading:benefits', { lng })}</Link>
-        </Heading>
-        <Heading as="h4">
+        </Box>
+        <Box as="p">
           <Link href="#other-services">
             {t('heading:other-services', { lng })}
           </Link>
-        </Heading>
-        <Heading as="h4">
+        </Box>
+        <Box as="p">
           <Link href="#contact-form">
             {t('heading:service-request', { lng })}
           </Link>
-        </Heading>
+        </Box>
       </Box>
       <Grid gap={2} columns={[1, 2]}>
         <ServiceDescription
