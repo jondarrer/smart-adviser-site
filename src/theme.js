@@ -40,6 +40,12 @@ export default {
       },
     },
   },
+  links: {
+    navcta: {
+      bg: 'ctaground',
+      color: 'background',
+    },
+  },
   styles: {
     root: {
       fontFamily: 'body',
@@ -95,6 +101,7 @@ export default {
       lineHeight: 'body',
     },
     a: {
+      background: 'inherit',
       color: 'primary',
     },
     pre: {
@@ -124,6 +131,5 @@ export default {
     img: {
       maxWidth: '100%',
     },
-    navlink: {},
   },
 };

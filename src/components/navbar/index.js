@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Box, MenuButton, NavLink, jsx } from 'theme-ui';
+import { Box, IconButton, MenuButton, NavLink, jsx } from 'theme-ui';
 
 import { LanguageContext } from '../../utils';
 
@@ -58,12 +58,10 @@ const Navbar = ({ open, setOpen }) => {
       <NavLink
         as="a"
         href={`tel:${t('phone-number-to-call', { lng })}`}
-        variant="styles.navlink"
+        variant="navcta"
         p={2}
         sx={{
           zIndex: 2,
-          bg: 'ctaground',
-          color: 'background',
         }}
       >
         <Box
