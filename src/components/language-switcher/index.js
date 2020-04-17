@@ -19,7 +19,11 @@ const LanguageSwitcher = ({ languages, sx }) => {
         ) : (
           <IconButton key={index} m={1}>
             <Link to={t(`nav:${location.pathname}`, { lng: language })}>
-              <Image src={`/images/${language}.png`} width="24px" />
+              <Image
+                src={`/images/${language}.png`}
+                width="24px"
+                alt={`${language.toUpperCase()} flag`}
+              />
             </Link>
           </IconButton>
         );
