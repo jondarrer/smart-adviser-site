@@ -62,12 +62,24 @@ const Navbar = ({ open, setOpen }) => {
         p={2}
         sx={{
           zIndex: 2,
+          bg: 'ctaground',
+          color: 'background',
         }}
       >
-        <Box as="span" sx={{ display: ['inline-block', 'none'] }}>
+        <Box
+          as="span"
+          sx={{
+            display: ['inline-block', 'none'],
+          }}
+        >
           Tel
         </Box>
-        <Box as="span" sx={{ display: ['none', 'inline-block'] }}>
+        <Box
+          as="span"
+          sx={{
+            display: ['none', 'inline-block'],
+          }}
+        >
           {t('phone-number', { lng })}
         </Box>
       </NavLink>

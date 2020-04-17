@@ -27,6 +27,7 @@ export default {
     gray: '#dfe3e8',
     accent: '#f49342',
     darken: '#00044c',
+    ctaground: '#000639',
     modes: {
       dark: {
         text: '#3e4155',
@@ -35,6 +36,7 @@ export default {
         secondary: '#b4e1fa',
         highlight: '#b7ecec',
         muted: '#e6e6e6',
+        ctaground: '#fff',
       },
     },
   },
