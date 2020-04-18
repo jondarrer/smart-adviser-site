@@ -9,7 +9,7 @@ const FooterSection = ({ children }) => (
       justifyContent: 'center',
     }}
     bg="muted"
-    px={['3', '4']}
+    px={['3', '3', '4']}
   >
     {children}
   </Flex>
