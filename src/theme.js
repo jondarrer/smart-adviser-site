@@ -101,7 +101,6 @@ export default {
       lineHeight: 'body',
     },
     a: {
-      background: 'inherit',
       color: 'primary',
     },
     pre: {

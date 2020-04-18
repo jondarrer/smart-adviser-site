@@ -29,6 +29,7 @@ i18n
           strapline: 'We are here to support your business!',
           'phone-number': '07731 398854',
           'phone-number-to-call': '+447731398854',
+          tel: 'Tel',
         },
         meta: {
           'meta-description-home':
@@ -103,6 +104,7 @@ i18n
           strapline: 'Suntem aici pentru a-ti sprijini afacerea!',
           'phone-number': '+44 7731 398854',
           'phone-number-to-call': '+447731398854',
+          tel: 'Tel',
         },
         meta: {
           'meta-description-home':

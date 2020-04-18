@@ -70,7 +70,7 @@ const Navbar = ({ open, setOpen }) => {
             display: ['inline-block', 'none'],
           }}
         >
-          Tel
+          {t('tel', { lng })}
         </Box>
         <Box
           as="span"
