@@ -5,12 +5,17 @@ import { Helmet } from 'react-helmet-async';
 import { Box, Grid, Heading, Link } from 'theme-ui';
 
 import { ServiceDescription, ContactForm } from '../components';
-import { getLanguageForLocale, LanguageContext } from '../utils';
+import {
+  getLanguageForLocale,
+  LanguageContext,
+  useSmoothScroll,
+} from '../utils';
 
 const Home = ({ locales, formEndpoint }) => {
   const lng = React.useContext(LanguageContext);
   const { t, i18n } = useTranslation();
   const location = useLocation();
+  const smoothScroll = useSmoothScroll({ '0': 44, '640': 0 });
 
   return (
     <>
@@ -65,30 +70,32 @@ const Home = ({ locales, formEndpoint }) => {
       <Box as="p">{t('service:safe-fast-efficient', { lng })}</Box>
       <Box>
         <Box as="p">
-          <Link href="#self-employment">
+          <Link href="#self-employment" onClick={(e) => smoothScroll(e)}>
             {t('heading:self-employment', { lng })}
           </Link>
         </Box>
         <Box as="p">
-          <Link href="#limited-companies">
+          <Link href="#limited-companies" onClick={(e) => smoothScroll(e)}>
             {t('heading:limited-companies', { lng })}
           </Link>
         </Box>
         <Box as="p">
-          <Link href="#benefits">{t('heading:benefits', { lng })}</Link>
+          <Link href="#benefits" onClick={(e) => smoothScroll(e)}>
+            {t('heading:benefits', { lng })}
+          </Link>
         </Box>
         <Box as="p">
-          <Link href="#other-services">
+          <Link href="#other-services" onClick={(e) => smoothScroll(e)}>
             {t('heading:other-services', { lng })}
           </Link>
         </Box>
         <Box as="p">
-          <Link href="#contact-form">
+          <Link href="#contact-form" onClick={(e) => smoothScroll(e)}>
             {t('heading:service-request', { lng })}
           </Link>
         </Box>
       </Box>
-      <Grid gap={2} columns={[1, 2]}>
+      <Grid gap={2} columns={[1, 1, 2]}>
         <ServiceDescription
           title="heading:self-employment"
           id="self-employment"
@@ -99,7 +106,7 @@ const Home = ({ locales, formEndpoint }) => {
             'service:penalty-appeal',
             'service:employment-history',
           ]}
-          sx={{ bg: ['muted', 'background'] }}
+          sx={{ bg: ['muted', 'muted', 'background'] }}
         ></ServiceDescription>
         <ServiceDescription
           title="heading:limited-companies"
@@ -123,7 +130,7 @@ const Home = ({ locales, formEndpoint }) => {
             'service:child-benefit',
             'service:maternity-allowance',
           ]}
-          sx={{ bg: ['muted', 'background'] }}
+          sx={{ bg: ['muted', 'muted', 'background'] }}
         ></ServiceDescription>
         <ServiceDescription
           title="heading:other-services"

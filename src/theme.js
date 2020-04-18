@@ -1,4 +1,5 @@
 export default {
+  breakpoints: [23.438, 40, 52, 64].map((n) => n + 'em'),
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
     body:
@@ -44,6 +45,10 @@ export default {
     navcta: {
       bg: 'ctaground',
       color: 'background',
+    },
+    navatc: {
+      bg: 'background',
+      color: 'ctaground',
     },
   },
   styles: {

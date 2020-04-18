@@ -13,7 +13,7 @@ const SlideOutMenu = ({ open, setOpen }) => {
   return (
     <Flex
       sx={{
-        display: ['flex', 'none'],
+        display: ['flex', 'flex', 'none'],
         flexDirection: 'column',
         bg: 'background',
         height: '100vh',
@@ -25,7 +25,7 @@ const SlideOutMenu = ({ open, setOpen }) => {
         left: 0,
         transform: open ? 'translateX(0)' : 'translateX(-100%)',
         transition: 'transform 0.3s ease-in-out',
-        width: ['100%', 0],
+        width: ['100%', '100%', 0],
       }}
     >
       <NavLink
