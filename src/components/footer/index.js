@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from 'react';
-import { Box, jsx } from 'theme-ui';
+import { Box, Text, jsx } from 'theme-ui';
 import { useTranslation } from 'react-i18next';
 
 import { LanguageContext } from '../../utils';
@@ -11,13 +11,26 @@ const Footer = () => {
 
   return (
     <Box
-      as="p"
       sx={{
-        maxWidth: '1100px',
         textAlign: 'center',
+        width: '100%',
       }}
     >
-      {t('copyright-notice', { lng })}
+      <Box sx={{ display: ['block', null, 'inline-block'] }}>
+        {t('company-no', { lng })}
+      </Box>
+      <Text sx={{ display: ['none', null, 'inline-block'] }} mx={2}>
+        |
+      </Text>
+      <Box sx={{ display: ['block', null, 'inline-block'] }}>
+        {t('company-registration', { lng })}
+      </Box>
+      <Text sx={{ display: ['none', null, null, 'inline-block'] }} mx={2}>
+        |
+      </Text>
+      <Box sx={{ display: ['block', null, 'inline-block'] }}>
+        {t('copyright-notice', { lng })}
+      </Box>
     </Box>
   );
 };

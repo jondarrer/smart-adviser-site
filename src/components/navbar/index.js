@@ -36,10 +36,9 @@ const Navbar = ({ open, setOpen }) => {
       <NavLink
         as={Link}
         to={t('nav:/', { lng })}
-        variant="styles.navlink"
         p={2}
+        variant={open ? 'navmenuopen' : 'nav'}
         sx={{
-          color: open ? 'primary' : 'background',
           zIndex: 2,
         }}
         onClick={() => setOpen(false)}
@@ -50,7 +49,6 @@ const Navbar = ({ open, setOpen }) => {
       <NavLink
         as={Link}
         to={t('nav:/', { lng })}
-        variant="styles.navlink"
         p={2}
         sx={{ display: ['none', 'none', 'inline-block'] }}
       >
@@ -59,7 +57,6 @@ const Navbar = ({ open, setOpen }) => {
       <NavLink
         as={Link}
         to={t('nav:/about', { lng })}
-        variant="styles.navlink"
         p={2}
         sx={{ display: ['none', 'none', 'inline-block'] }}
       >

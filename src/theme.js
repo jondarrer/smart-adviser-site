@@ -45,6 +45,24 @@ export default {
     },
   },
   links: {
+    nav: {
+      color: 'background',
+      '&:hover': {
+        color: 'background',
+      },
+      '&:focus': {
+        color: 'background',
+      },
+    },
+    navmenuopen: {
+      color: 'primary',
+      '&:hover': {
+        color: 'primary',
+      },
+      '&:focus': {
+        color: 'primary',
+      },
+    },
     navcta: {
       bg: 'secondary',
       color: 'gray',

@@ -20,8 +20,9 @@ i18n
           Home: 'Home',
           About: 'About',
           'site-name': 'smartadviser.co.uk',
-          'copyright-notice':
-            '© 2020 Smart Adviser Ltd, all rights reserved | Company No. 11519911 | Registered in England & Wales.',
+          'copyright-notice': '© 2020 Smart Adviser Ltd, all rights reserved',
+          'company-no': 'Company No. 11519911',
+          'company-registration': 'Registered in England & Wales.',
           'if-you-would-like-us-to-contact-you':
             'If you would like us to contact you please leave us the following details:',
           'business-name': 'Smart Adviser Ltd',
@@ -98,7 +99,9 @@ i18n
           About: 'Despre',
           'site-name': 'smartadviser.co.uk/ro',
           'copyright-notice':
-            '© 2020 Smart Adviser Ltd, toate drepturile rezervate | Nr. Companie 11519911 | Înregistrat în Anglia și Țara Galilor.',
+            '© 2020 Smart Adviser Ltd, toate drepturile rezervate',
+          'company-no': 'Nr. Companie 11519911',
+          'company-registration': 'Înregistrat în Anglia și Țara Galilor.',
           'if-you-would-like-us-to-contact-you':
             'Daca doriti sa fiti contactat, va rugam sa lasati urmatoarele detalii:',
           'business-name': 'Smart Adviser Ltd',
@@ -138,7 +141,7 @@ i18n
           'registered-as-self-employed':
             'Inregistrare ca self-employed - 50 GBP',
           'registered-in-cis': 'Inregistrare in CIS (activare UTR) - 30 GBP',
-          'penalty-appeal': 'Anulare penalitati - de la £50',
+          'penalty-appeal': 'Anulare penalitati - de la 50 GBP',
           'employment-history': 'Istoric de angajare (apel la HMRC) - 30 GBP',
           'set-up-a-company': 'Infiintare companie - 100 GBP',
           'strike-off-a-company': 'Inchidere companie - 100 GBP',
