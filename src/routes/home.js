@@ -103,29 +103,31 @@ const Home = ({ locales, formEndpoint }) => {
         <Heading as="h1">{t('business-name', { lng })}</Heading>
         <Heading as="h2">{t('business-description', { lng })}</Heading>
         <Heading as="h3">{t('strapline', { lng })}</Heading>
-        <Heading as="h4">{t('heading:online-services', { lng })}</Heading>
+        <Heading as="h4" mt={[3, null, 4]}>
+          {t('heading:online-services', { lng })}
+        </Heading>
         <Box as="p">{t('service:safe-fast-efficient', { lng })}</Box>
         <Grid
           gap={[2, null, 4]}
           columns={[1, null, 4]}
           marginTop={[3, null, 4]}
         >
-          <Box as="p">
+          <Box as="h4">
             <Link href="#self-employment" onClick={(e) => smoothScroll(e)}>
               {t('heading:self-employment', { lng })}
             </Link>
           </Box>
-          <Box as="p">
+          <Box as="h4">
             <Link href="#limited-companies" onClick={(e) => smoothScroll(e)}>
               {t('heading:limited-companies', { lng })}
             </Link>
           </Box>
-          <Box as="p">
+          <Box as="h4">
             <Link href="#benefits" onClick={(e) => smoothScroll(e)}>
               {t('heading:benefits', { lng })}
             </Link>
           </Box>
-          <Box as="p">
+          <Box as="h4">
             <Link href="#other-services" onClick={(e) => smoothScroll(e)}>
               {t('heading:other-services', { lng })}
             </Link>
@@ -133,7 +135,11 @@ const Home = ({ locales, formEndpoint }) => {
         </Grid>
       </Box>
       <Box as="p" px={['3', '3', '4']} pt={['3', '3', '4']}>
-        <Link href="#contact-form" onClick={(e) => smoothScroll(e)}>
+        <Link
+          href="#contact-form"
+          onClick={(e) => smoothScroll(e)}
+          sx={{ fontWeight: 'bold' }}
+        >
           {t('heading:service-request', { lng })}
         </Link>{' '}
         - {t('please-let-us-know', { lng })}

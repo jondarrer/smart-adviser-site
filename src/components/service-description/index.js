@@ -11,7 +11,14 @@ const ServiceDescription = ({ title, Icon, subServices, sx, ...rest }) => {
 
   return (
     <Box sx={{ ...sx }} {...rest}>
-      <Heading as="h2" px={2} py={1} bg="accent" color="background">
+      <Heading
+        as="h2"
+        px={2}
+        py={1}
+        bg="primary"
+        color="background"
+        sx={{ borderTopLeftRadius: 'service', borderTopRightRadius: 'service' }}
+      >
         <Icon
           width="24px"
           height="24px"
@@ -20,15 +27,25 @@ const ServiceDescription = ({ title, Icon, subServices, sx, ...rest }) => {
         />
         {t(title, { lng })}
       </Heading>
-      <Box as="ul" variant="styles.ul" px={2} py={1} bg="muted">
+      <Box
+        as="ul"
+        variant="styles.ul"
+        px={2}
+        py={1}
+        bg="muted"
+        sx={{
+          borderBottomLeftRadius: 'service',
+          borderBottomRightRadius: 'service',
+        }}
+      >
         {subServices.map(({ text, Icon }, index) => (
           <Box as="li" key={index} variant="styles.li">
-            <Icon
+            {/*<Icon
               width="16px"
               height="16px"
               fill="currentcolor"
               sx={{ marginRight: 2 }}
-            />
+            />*/}
             {t(text, { lng })}
           </Box>
         ))}

@@ -67,6 +67,10 @@ const ContactForm = ({ formEndpoint, id, sxp }) => {
                   });
                   resetForm();
                 }
+              })
+              .catch((error) => {
+                setResponse({ isError: true, message: error });
+                setSubmitting(false);
               });
           }, 400);
         }}
@@ -82,7 +86,13 @@ const ContactForm = ({ formEndpoint, id, sxp }) => {
         }) => (
           <>
             {response.message && (
-              <Message my="3">{t(response.message, { lng })}</Message>
+              <Message
+                my="3"
+                bg={response.isError ? 'error' : 'highlight'}
+                color={response.isError ? 'background' : 'text'}
+              >
+                {t(response.message, { lng })}
+              </Message>
             )}
             <Grid
               as="form"
@@ -108,10 +118,14 @@ const ContactForm = ({ formEndpoint, id, sxp }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.name}
-                  mb={3}
+                  required="required"
                 />
-                {errors.name && touched.name && <Box mb="3">{errors.name}</Box>}
-                <Label htmlFor="phone">
+                {errors.name && touched.name && (
+                  <Box mt={1} color="error">
+                    {errors.name}
+                  </Box>
+                )}
+                <Label htmlFor="phone" mt={3}>
                   {t('form-label:phone', { lng })} *
                 </Label>
                 <Input
@@ -120,26 +134,31 @@ const ContactForm = ({ formEndpoint, id, sxp }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.phone}
-                  mb={3}
+                  required="required"
                 />
                 {errors.phone && touched.phone && (
-                  <Box mb="3">{errors.phone}</Box>
+                  <Box mt={1} color="error">
+                    {errors.phone}
+                  </Box>
                 )}
-                <Label htmlFor="email">{t('form-label:email', { lng })}</Label>
+                <Label htmlFor="email" mt={3}>
+                  {t('form-label:email', { lng })}
+                </Label>
                 <Input
                   type="email"
                   name="email"
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.email}
-                  mb={3}
                 />
                 {errors.email && touched.email && (
-                  <Box mb="3">{errors.email}</Box>
+                  <Box mt={1} color="error">
+                    {errors.email}
+                  </Box>
                 )}
               </Box>
               <Box>
-                <Label htmlFor="comment">
+                <Label htmlFor="comment" mt={[3, null, 0]}>
                   {t('form-label:comment', { lng })}
                 </Label>
                 <Textarea
@@ -148,9 +167,13 @@ const ContactForm = ({ formEndpoint, id, sxp }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.comment}
-                  mb={3}
                 />
-                <Button type="submit" disabled={isSubmitting}>
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  bg={isSubmitting ? 'muted' : 'primary'}
+                  mt={3}
+                >
                   {t('form-label:submit', { lng })}
                 </Button>
               </Box>

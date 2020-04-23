@@ -25,7 +25,7 @@ i18n
           'if-you-would-like-us-to-contact-you':
             'If you would like us to contact you please leave us the following details:',
           'business-name': 'Smart Adviser Ltd',
-          'business-description': 'Accounting services in UK',
+          'business-description': 'Accounting services in the UK',
           strapline: 'We are here to support your business!',
           'phone-number': '07731 398854',
           'phone-number-to-call': '+447731398854',

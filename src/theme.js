@@ -1,6 +1,9 @@
 export default {
   breakpoints: [23.438, 40, 52, 64].map((n) => n + 'em'),
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  radii: {
+    service: '4px',
+  },
   fonts: {
     body:
       'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
@@ -28,6 +31,8 @@ export default {
     gray: '#f6e8ea',
     accent: '#947d3d',
     darken: '#00044c',
+    error: '#f00',
+    mildmute: '#f8f8f8',
     modes: {
       dark: {
         text: '#fff',
@@ -51,6 +56,14 @@ export default {
   },
   sizes: {
     container: 1100,
+  },
+  forms: {
+    input: {
+      bg: 'mildmute',
+    },
+    textarea: {
+      bg: 'mildmute',
+    },
   },
   styles: {
     root: {
