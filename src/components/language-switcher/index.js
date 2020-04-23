@@ -6,13 +6,13 @@ import { Box, Flex, IconButton, Image, jsx } from 'theme-ui';
 
 import { LanguageContext } from '../../utils';
 
-const LanguageSwitcher = ({ languages, sx }) => {
+const LanguageSwitcher = ({ languages, sxp }) => {
   const lng = React.useContext(LanguageContext);
   const { t, i18n } = useTranslation();
   const location = useLocation();
 
   return (
-    <Flex sx={{ ...sx }}>
+    <Flex sx={{ ...sxp }}>
       {languages.map((language, index) => {
         return language === lng ? (
           <Box as="span" key={index} />

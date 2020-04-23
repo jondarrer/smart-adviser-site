@@ -7,6 +7,8 @@ import { Box, IconButton, MenuButton, NavLink, jsx } from 'theme-ui';
 
 import { LanguageContext, useSmoothScroll } from '../../utils';
 
+import { LanguageSwitcher } from '../';
+
 import SlideOutMenu from './slide-out-menu';
 
 const Navbar = ({ open, setOpen }) => {
@@ -110,6 +112,7 @@ const Navbar = ({ open, setOpen }) => {
           {t('phone-number', { lng })}
         </Box>
       </NavLink>
+      <LanguageSwitcher languages={['en', 'ro']} sxp={{ zIndex: 2 }} />
     </>
   );
 };
