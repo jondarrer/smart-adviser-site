@@ -11,6 +11,34 @@ import {
   useSmoothScroll,
 } from '../utils';
 
+import SuitIcon from '../icons/1602996/029-suit.svg';
+import SuitcaseIcon from '../icons/1602996/024-suitcase.svg';
+import MagnifyingGlassIcon from '../icons/1602996/042-magnifying-glass.svg';
+import Accounting2Icon from '../icons/1602996/040-accounting-2.svg';
+
+import CalculatorIcon from '../icons/1602996/001-calculator.svg';
+import Calculator1Icon from '../icons/1602996/003-calculator-1.svg';
+import ArchiveIcon from '../icons/1602996/033-archive.svg';
+import AnswerIcon from '../icons/1602996/018-answer.svg';
+import Archive1Icon from '../icons/1602996/043-archive-1.svg';
+
+import BankIcon from '../icons/1602996/044-bank.svg';
+import TrashIcon from '../icons/1602996/049-trash.svg';
+// CalculatorIcon
+import BookIcon from '../icons/1602996/037-book.svg';
+import ClipboardIcon from '../icons/1602996/032-clipboard.svg';
+// CalculatorIcon
+import MoneyIcon from '../icons/1602996/021-money.svg';
+import GraphIcon from '../icons/1602996/011-graph.svg';
+
+import GearIcon from '../icons/1602996/030-gear.svg';
+import PiggyBankIcon from '../icons/1602996/012-piggy-bank.svg';
+import Accounting1Icon from '../icons/1602996/023-accounting-1.svg';
+
+import PlanningIcon from '../icons/1602996/038-planning.svg';
+import NewsIcon from '../icons/1602996/035-news.svg';
+import CardIcon from '../icons/1602996/025-card.svg';
+
 const Home = ({ locales, formEndpoint }) => {
   const lng = React.useContext(LanguageContext);
   const { t, i18n } = useTranslation();
@@ -99,46 +127,51 @@ const Home = ({ locales, formEndpoint }) => {
         <ServiceDescription
           title="heading:self-employment"
           id="self-employment"
+          Icon={SuitIcon}
           subServices={[
-            'service:tax-return',
-            'service:registered-as-self-employed',
-            'service:registered-in-cis',
-            'service:penalty-appeal',
-            'service:employment-history',
+            { text: 'service:tax-return', Icon: CalculatorIcon },
+            {
+              text: 'service:registered-as-self-employed',
+              Icon: Archive1Icon,
+            },
+            { text: 'service:registered-in-cis', Icon: Archive1Icon },
+            { text: 'service:penalty-appeal', Icon: AnswerIcon },
+            { text: 'service:employment-history', Icon: ArchiveIcon },
           ]}
-          sx={{ bg: ['muted', 'muted', 'background'] }}
         ></ServiceDescription>
         <ServiceDescription
           title="heading:limited-companies"
           id="limited-companies"
+          Icon={SuitcaseIcon}
           subServices={[
-            'service:set-up-a-company',
-            'service:strike-off-a-company',
-            'service:company-tax-return',
-            'service:bookkeeping',
-            'service:cis-vat-paye-reg',
-            'service:vat-return',
-            'service:paye',
-            'service:cis-monthly-returns',
+            { text: 'service:set-up-a-company', Icon: BankIcon },
+            { text: 'service:strike-off-a-company', Icon: TrashIcon },
+            { text: 'service:company-tax-return', Icon: CalculatorIcon },
+            { text: 'service:bookkeeping', Icon: BookIcon },
+            { text: 'service:cis-vat-paye-reg', Icon: ClipboardIcon },
+            { text: 'service:vat-return', Icon: CalculatorIcon },
+            { text: 'service:paye', Icon: MoneyIcon },
+            { text: 'service:cis-monthly-returns', Icon: GraphIcon },
           ]}
         ></ServiceDescription>
         <ServiceDescription
           title="heading:benefits"
           id="benefits"
+          Icon={MagnifyingGlassIcon}
           subServices={[
-            'service:universal-credits',
-            'service:child-benefit',
-            'service:maternity-allowance',
+            { text: 'service:universal-credits', Icon: GearIcon },
+            { text: 'service:child-benefit', Icon: PiggyBankIcon },
+            { text: 'service:maternity-allowance', Icon: Accounting1Icon },
           ]}
-          sx={{ bg: ['muted', 'muted', 'background'] }}
         ></ServiceDescription>
         <ServiceDescription
           title="heading:other-services"
           id="other-services"
+          Icon={Accounting2Icon}
           subServices={[
-            'service:cv',
-            'service:complete-different-forms',
-            'service:equivalent-uk-qualifications',
+            { text: 'service:cv', Icon: PlanningIcon },
+            { text: 'service:complete-different-forms', Icon: NewsIcon },
+            { text: 'service:equivalent-uk-qualifications', Icon: CardIcon },
           ]}
         ></ServiceDescription>
       </Grid>
