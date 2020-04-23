@@ -135,5 +135,12 @@ export default {
     img: {
       maxWidth: '100%',
     },
+    ul: {
+      listStyleType: 'none',
+      padding: 0,
+    },
+    li: {
+      padding: 1,
+    },
   },
 };
