@@ -91,39 +91,49 @@ const Home = ({ locales, formEndpoint }) => {
           }`}
         </script>
       </Helmet>
-      <Heading as="h1">{t('business-name', { lng })}</Heading>
-      <Heading as="h2">{t('business-description', { lng })}</Heading>
-      <Heading as="h3">{t('strapline', { lng })}</Heading>
-      <Heading as="h4">{t('heading:online-services', { lng })}</Heading>
-      <Box as="p">{t('service:safe-fast-efficient', { lng })}</Box>
-      <Box>
-        <Box as="p">
-          <Link href="#self-employment" onClick={(e) => smoothScroll(e)}>
-            {t('heading:self-employment', { lng })}
-          </Link>
-        </Box>
-        <Box as="p">
-          <Link href="#limited-companies" onClick={(e) => smoothScroll(e)}>
-            {t('heading:limited-companies', { lng })}
-          </Link>
-        </Box>
-        <Box as="p">
-          <Link href="#benefits" onClick={(e) => smoothScroll(e)}>
-            {t('heading:benefits', { lng })}
-          </Link>
-        </Box>
-        <Box as="p">
-          <Link href="#other-services" onClick={(e) => smoothScroll(e)}>
-            {t('heading:other-services', { lng })}
-          </Link>
-        </Box>
-        <Box as="p">
-          <Link href="#contact-form" onClick={(e) => smoothScroll(e)}>
-            {t('heading:service-request', { lng })}
-          </Link>
+      <Box
+        px={['3', '3', '4']}
+        sx={{
+          backgroundImage: 'url("./images/london-skyline.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          textAlign: 'center',
+        }}
+      >
+        <Heading as="h1">{t('business-name', { lng })}</Heading>
+        <Heading as="h2">{t('business-description', { lng })}</Heading>
+        <Heading as="h3">{t('strapline', { lng })}</Heading>
+        <Heading as="h4">{t('heading:online-services', { lng })}</Heading>
+        <Box as="p">{t('service:safe-fast-efficient', { lng })}</Box>
+        <Box>
+          <Box as="p">
+            <Link href="#self-employment" onClick={(e) => smoothScroll(e)}>
+              {t('heading:self-employment', { lng })}
+            </Link>
+          </Box>
+          <Box as="p">
+            <Link href="#limited-companies" onClick={(e) => smoothScroll(e)}>
+              {t('heading:limited-companies', { lng })}
+            </Link>
+          </Box>
+          <Box as="p">
+            <Link href="#benefits" onClick={(e) => smoothScroll(e)}>
+              {t('heading:benefits', { lng })}
+            </Link>
+          </Box>
+          <Box as="p">
+            <Link href="#other-services" onClick={(e) => smoothScroll(e)}>
+              {t('heading:other-services', { lng })}
+            </Link>
+          </Box>
+          <Box as="p">
+            <Link href="#contact-form" onClick={(e) => smoothScroll(e)}>
+              {t('heading:service-request', { lng })}
+            </Link>
+          </Box>
         </Box>
       </Box>
-      <Grid gap={2} columns={[1, 1, 2]}>
+      <Grid gap={2} columns={[1, 1, 2]} px={['3', '3', '4']}>
         <ServiceDescription
           title="heading:self-employment"
           id="self-employment"
@@ -175,7 +185,11 @@ const Home = ({ locales, formEndpoint }) => {
           ]}
         ></ServiceDescription>
       </Grid>
-      <ContactForm formEndpoint={formEndpoint} id="contact-form" />
+      <ContactForm
+        formEndpoint={formEndpoint}
+        id="contact-form"
+        sxp={{ px: ['3', '3', '4'] }}
+      />
     </>
   );
 };

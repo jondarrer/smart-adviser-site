@@ -51,6 +51,9 @@ export default {
       color: 'ctaground',
     },
   },
+  sizes: {
+    container: 1100,
+  },
   styles: {
     root: {
       fontFamily: 'body',

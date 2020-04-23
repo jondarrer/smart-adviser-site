@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from 'react';
-import { Flex, jsx } from 'theme-ui';
+import { Container, Flex, jsx } from 'theme-ui';
 
 const FooterSection = ({ children }) => (
   <Flex
@@ -9,9 +9,10 @@ const FooterSection = ({ children }) => (
       justifyContent: 'center',
     }}
     bg="muted"
-    px={['3', '3', '4']}
   >
-    {children}
+    <Container sx={{ display: 'flex' }} p={['3', '3', '4']}>
+      {children}
+    </Container>
   </Flex>
 );
 
