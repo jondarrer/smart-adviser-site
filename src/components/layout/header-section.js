@@ -11,7 +11,8 @@ const HeaderSection = ({ children }) => (
       variant: 'styles.header',
       width: '100%',
     }}
-    bg="gray"
+    bg="primary"
+    color="background"
   >
     <Container sx={{ display: 'flex' }} px={['3', '3', '4']}>
       {children}

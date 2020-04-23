@@ -8,7 +8,8 @@ const FooterSection = ({ children }) => (
     sx={{
       justifyContent: 'center',
     }}
-    bg="muted"
+    bg="text"
+    color="background"
   >
     <Container sx={{ display: 'flex' }} p={['3', '3', '4']}>
       {children}

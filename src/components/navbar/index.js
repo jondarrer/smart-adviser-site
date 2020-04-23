@@ -21,18 +21,25 @@ const Navbar = ({ open, setOpen }) => {
       <MenuButton
         aria-label="Toggle Menu"
         sx={{
+          color: open ? 'primary' : 'background',
           display: ['inline-flex', 'inline-flex', 'none'],
+          marginTop: '6px',
           zIndex: 2,
         }}
         onClick={() => setOpen(!open)}
       />
-      <SlideOutMenu open={open} setOpen={setOpen} />
+      <SlideOutMenu
+        open={open}
+        setOpen={setOpen}
+        sxp={{ color: open ? 'primary' : 'background' }}
+      />
       <NavLink
         as={Link}
         to={t('nav:/', { lng })}
         variant="styles.navlink"
         p={2}
         sx={{
+          color: open ? 'primary' : 'background',
           zIndex: 2,
         }}
         onClick={() => setOpen(false)}

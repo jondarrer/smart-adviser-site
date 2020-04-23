@@ -30,6 +30,8 @@ i18n
           'phone-number': '07731 398854',
           'phone-number-to-call': '+447731398854',
           tel: 'Tel',
+          'please-let-us-know':
+            'please let us know what services you are interested in:',
         },
         meta: {
           'meta-description-home':
@@ -105,6 +107,8 @@ i18n
           'phone-number': '+44 7731 398854',
           'phone-number-to-call': '+447731398854',
           tel: 'Tel',
+          'please-let-us-know':
+            'vă rugăm să ne spuneți ce servicii vă interesează:',
         },
         meta: {
           'meta-description-home':

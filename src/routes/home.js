@@ -92,7 +92,7 @@ const Home = ({ locales, formEndpoint }) => {
         </script>
       </Helmet>
       <Box
-        px={['3', '3', '4']}
+        p={['3', '3', '4']}
         sx={{
           backgroundImage: 'url("./images/london-skyline.jpg")',
           backgroundSize: 'cover',
@@ -105,7 +105,11 @@ const Home = ({ locales, formEndpoint }) => {
         <Heading as="h3">{t('strapline', { lng })}</Heading>
         <Heading as="h4">{t('heading:online-services', { lng })}</Heading>
         <Box as="p">{t('service:safe-fast-efficient', { lng })}</Box>
-        <Box>
+        <Grid
+          gap={[2, null, 4]}
+          columns={[1, null, 4]}
+          marginTop={[3, null, 4]}
+        >
           <Box as="p">
             <Link href="#self-employment" onClick={(e) => smoothScroll(e)}>
               {t('heading:self-employment', { lng })}
@@ -126,14 +130,20 @@ const Home = ({ locales, formEndpoint }) => {
               {t('heading:other-services', { lng })}
             </Link>
           </Box>
-          <Box as="p">
-            <Link href="#contact-form" onClick={(e) => smoothScroll(e)}>
-              {t('heading:service-request', { lng })}
-            </Link>
-          </Box>
-        </Box>
+        </Grid>
       </Box>
-      <Grid gap={2} columns={[1, 1, 2]} px={['3', '3', '4']}>
+      <Box as="p" px={['3', '3', '4']} pt={['3', '3', '4']}>
+        <Link href="#contact-form" onClick={(e) => smoothScroll(e)}>
+          {t('heading:service-request', { lng })}
+        </Link>{' '}
+        - {t('please-let-us-know', { lng })}
+      </Box>
+      <Grid
+        gap={[3, null, 4]}
+        columns={[1, null, 2]}
+        px={['3', '3', '4']}
+        pt={['3', '3', '4']}
+      >
         <ServiceDescription
           title="heading:self-employment"
           id="self-employment"
@@ -188,7 +198,7 @@ const Home = ({ locales, formEndpoint }) => {
       <ContactForm
         formEndpoint={formEndpoint}
         id="contact-form"
-        sxp={{ px: ['3', '3', '4'] }}
+        sxp={{ p: ['3', '3', '4'] }}
       />
     </>
   );

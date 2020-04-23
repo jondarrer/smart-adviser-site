@@ -10,14 +10,8 @@ const ServiceDescription = ({ title, Icon, subServices, sx, ...rest }) => {
   const { t, i18n } = useTranslation();
 
   return (
-    <Box
-      sx={{
-        maxWidth: '1100px',
-        ...sx,
-      }}
-      {...rest}
-    >
-      <Heading as="h2" p={1}>
+    <Box sx={{ ...sx }} {...rest}>
+      <Heading as="h2" px={2} py={1} bg="accent" color="background">
         <Icon
           width="24px"
           height="24px"
@@ -26,7 +20,7 @@ const ServiceDescription = ({ title, Icon, subServices, sx, ...rest }) => {
         />
         {t(title, { lng })}
       </Heading>
-      <Box as="ul" variant="styles.ul">
+      <Box as="ul" variant="styles.ul" px={2} py={1} bg="muted">
         {subServices.map(({ text, Icon }, index) => (
           <Box as="li" key={index} variant="styles.li">
             <Icon

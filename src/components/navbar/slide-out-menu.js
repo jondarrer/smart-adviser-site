@@ -6,7 +6,7 @@ import { Flex, NavLink, jsx } from 'theme-ui';
 
 import { LanguageContext } from '../../utils';
 
-const SlideOutMenu = ({ open, setOpen }) => {
+const SlideOutMenu = ({ open, setOpen, sxp }) => {
   const lng = React.useContext(LanguageContext);
   const { t, i18n } = useTranslation();
 
@@ -26,6 +26,7 @@ const SlideOutMenu = ({ open, setOpen }) => {
         transform: open ? 'translateX(0)' : 'translateX(-100%)',
         transition: 'transform 0.3s ease-in-out',
         width: ['100%', '100%', 0],
+        ...sxp,
       }}
     >
       <NavLink
