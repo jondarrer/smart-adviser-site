@@ -55,7 +55,7 @@ const Home = ({ locales, formEndpoint }) => {
         {locales.map((locale) => (
           <link
             rel="alternate"
-            href={`https://smartadviser.co.uk${t(location.pathname, {
+            href={`https://smartadviser.co.uk${t('nav:' + location.pathname, {
               lng: getLanguageForLocale(locale),
             })}`}
             hrefLang={locale}
