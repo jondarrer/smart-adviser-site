@@ -33,6 +33,27 @@ const About = ({ locales }) => {
           content={t('meta:meta-description-about', { lng })}
         />
         <meta name="keywords" content={t('meta:meta-keywords', { lng })} />
+        <meta
+          property="og:title"
+          content={`${t('business-name', { lng })} - ${t(
+            'business-description',
+            { lng }
+          )}`}
+        />
+        <meta property="og:site_name" content={t('business-name', { lng })} />
+        <meta
+          property="og:url"
+          content={`https://${t('site-name', { lng })}`}
+        />
+        <meta
+          property="og:description"
+          content={t('meta:meta-description-about', { lng })}
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://smartadviser.co.uk/images/london-skyline.jpg"
+        />
       </Helmet>
       <Heading as="h1">
         {t('About', { lng })} ({lng})
