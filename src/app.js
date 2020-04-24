@@ -12,35 +12,35 @@ const locales = ['ro', 'en-gb'];
 const App = () => (
   <ThemeProvider theme={theme}>
     <Switch>
-      <Route path="/" exact>
+      <Route path="/v-next" exact>
         <LanguageContext.Provider value="en">
           <Layout>
             <Home locales={locales} formEndpoint={FORM_ENDPOINT} />
           </Layout>
         </LanguageContext.Provider>
       </Route>
-      <Route path="/about">
+      <Route path="/v-next/about">
         <LanguageContext.Provider value="en">
           <Layout>
             <About locales={locales} />
           </Layout>
         </LanguageContext.Provider>
       </Route>
-      <Route path="/attributions">
+      <Route path="/v-next/attributions">
         <LanguageContext.Provider value="en">
           <Layout>
             <Attributions locales={locales} />
           </Layout>
         </LanguageContext.Provider>
       </Route>
-      <Route path="/ro" exact>
+      <Route path="/v-next/ro" exact>
         <LanguageContext.Provider value="ro">
           <Layout>
             <Home locales={locales} formEndpoint={FORM_ENDPOINT} />
           </Layout>
         </LanguageContext.Provider>
       </Route>
-      <Route path="/ro/despre">
+      <Route path="/v-next/ro/despre">
         <LanguageContext.Provider value="ro">
           <Layout>
             <About locales={locales} />

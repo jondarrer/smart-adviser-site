@@ -52,14 +52,21 @@ const paths = [
   },
 ];
 
-const routes = paths.map((path) => path.path);
+// const routes = paths.map((path) => path.path);
+const routes = [
+  '/v-next',
+  '/v-next/about',
+  '/v-next/attributions',
+  '/v-next/ro',
+  '/v-next/ro/despre',
+];
 
 module.exports = {
   entry: resolve(__dirname, 'src'),
   output: {
     path: resolve(__dirname, 'dist'),
     publicPath: '/',
-    filename: 'bundle.js',
+    filename: 'v-next-bundle.js',
   },
   module: {
     rules: [
@@ -83,7 +90,10 @@ module.exports = {
       component: App,
       baseFilename: 'default.html',
     }),
-    new CopyPlugin([{ from: 'src/images', to: 'images' }]),
+    new CopyPlugin([
+      { from: 'src/images', to: 'images' },
+      { from: 'current', to: '' },
+    ]),
   ],
   devServer: {
     contentBase: resolve(__dirname, 'dist'),

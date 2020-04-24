@@ -21,6 +21,26 @@
         "destination": "/__ro_despre.html"
       },
       {
+        "source": "/v-next",
+        "destination": "/__v-next.html"
+      },
+      {
+        "source": "/v-next/about",
+        "destination": "/__v-next_about.html"
+      },
+      {
+        "source": "/v-next/attributions",
+        "destination": "/__v-next_attributions.html"
+      },
+      {
+        "source": "/v-next/ro",
+        "destination": "/__v-next_ro.html"
+      },
+      {
+        "source": "/v-next/ro/despre",
+        "destination": "/__v-next_ro_despre.html"
+      },
+      {
         "source": "!/@(js|css|jpg|png|txt)/**",
         "destination": "/__index.html"
       }
