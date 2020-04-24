@@ -115,7 +115,7 @@ const Home = ({ locales, formEndpoint }) => {
       <Box
         p={['3', '3', '4']}
         sx={{
-          backgroundImage: 'url("./images/london-skyline.jpg")',
+          backgroundImage: 'url("/images/london-skyline.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           textAlign: 'center',
