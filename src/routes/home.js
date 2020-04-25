@@ -11,33 +11,33 @@ import {
   useSmoothScroll,
 } from '../utils';
 
-import SuitIcon from '../icons/1602996/029-suit.svg';
-import SuitcaseIcon from '../icons/1602996/024-suitcase.svg';
-import MagnifyingGlassIcon from '../icons/1602996/042-magnifying-glass.svg';
-import Accounting2Icon from '../icons/1602996/040-accounting-2.svg';
+import SuitIcon from '../icons/1602894/029-suit.svg';
+import SuitcaseIcon from '../icons/1602894/024-suitcase.svg';
+import MagnifyingGlassIcon from '../icons/1602894/042-magnifying-glass.svg';
+import Accounting2Icon from '../icons/1602894/040-accounting-2.svg';
 
-import CalculatorIcon from '../icons/1602996/001-calculator.svg';
-import Calculator1Icon from '../icons/1602996/003-calculator-1.svg';
-import ArchiveIcon from '../icons/1602996/033-archive.svg';
-import AnswerIcon from '../icons/1602996/018-answer.svg';
-import Archive1Icon from '../icons/1602996/043-archive-1.svg';
+import CalculatorIcon from '../icons/1602894/001-calculator.svg';
+import Calculator1Icon from '../icons/1602894/003-calculator-1.svg';
+import ArchiveIcon from '../icons/1602894/033-archive.svg';
+import AnswerIcon from '../icons/1602894/018-answer.svg';
+import Archive1Icon from '../icons/1602894/043-archive-1.svg';
 
-import BankIcon from '../icons/1602996/044-bank.svg';
-import TrashIcon from '../icons/1602996/049-trash.svg';
+import BankIcon from '../icons/1602894/044-bank.svg';
+import TrashIcon from '../icons/1602894/049-trash.svg';
 // CalculatorIcon
-import BookIcon from '../icons/1602996/037-book.svg';
-import ClipboardIcon from '../icons/1602996/032-clipboard.svg';
+import BookIcon from '../icons/1602894/037-book.svg';
+import ClipboardIcon from '../icons/1602894/032-clipboard.svg';
 // CalculatorIcon
-import MoneyIcon from '../icons/1602996/021-money.svg';
-import GraphIcon from '../icons/1602996/011-graph.svg';
+import MoneyIcon from '../icons/1602894/021-money.svg';
+import GraphIcon from '../icons/1602894/011-graph.svg';
 
-import GearIcon from '../icons/1602996/030-gear.svg';
-import PiggyBankIcon from '../icons/1602996/012-piggy-bank.svg';
-import Accounting1Icon from '../icons/1602996/023-accounting-1.svg';
+import GearIcon from '../icons/1602894/030-gear.svg';
+import PiggyBankIcon from '../icons/1602894/012-piggy-bank.svg';
+import Accounting1Icon from '../icons/1602894/023-accounting-1.svg';
 
-import PlanningIcon from '../icons/1602996/038-planning.svg';
-import NewsIcon from '../icons/1602996/035-news.svg';
-import CardIcon from '../icons/1602996/025-card.svg';
+import PlanningIcon from '../icons/1602894/038-planning.svg';
+import NewsIcon from '../icons/1602894/035-news.svg';
+import CardIcon from '../icons/1602894/025-card.svg';
 
 const Home = ({ locales, formEndpoint }) => {
   const lng = React.useContext(LanguageContext);

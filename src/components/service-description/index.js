@@ -40,12 +40,12 @@ const ServiceDescription = ({ title, Icon, subServices, sx, ...rest }) => {
       >
         {subServices.map(({ text, Icon }, index) => (
           <Box as="li" key={index} variant="styles.li">
-            {/*<Icon
+            <Icon
               width="16px"
               height="16px"
               fill="currentcolor"
               sx={{ marginRight: 2 }}
-            />*/}
+            />
             {t(text, { lng })}
           </Box>
         ))}
