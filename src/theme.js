@@ -64,12 +64,12 @@ export default {
       },
     },
     navcta: {
-      bg: 'secondary',
-      color: 'gray',
+      bg: 'background',
+      color: 'primary',
     },
     navatc: {
-      bg: 'gray',
-      color: 'secondary',
+      bg: 'background',
+      color: 'primary',
     },
   },
   sizes: {

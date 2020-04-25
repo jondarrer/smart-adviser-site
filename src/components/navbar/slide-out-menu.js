@@ -6,6 +6,8 @@ import { Flex, NavLink, jsx } from 'theme-ui';
 
 import { LanguageContext } from '../../utils';
 
+import MenuLink from './menu-link';
+
 const SlideOutMenu = ({ open, setOpen, sxp }) => {
   const lng = React.useContext(LanguageContext);
   const { t, i18n } = useTranslation();
@@ -29,24 +31,22 @@ const SlideOutMenu = ({ open, setOpen, sxp }) => {
         ...sxp,
       }}
     >
-      <NavLink
-        as={Link}
+      <MenuLink
         to={t('nav:/', { lng })}
         variant="styles.navlink"
         p={2}
         onClick={() => setOpen(!open)}
       >
         {t('Home', { lng })}
-      </NavLink>
-      <NavLink
-        as={Link}
+      </MenuLink>
+      <MenuLink
         to={t('nav:/about', { lng })}
         variant="styles.navlink"
         p={2}
         onClick={() => setOpen(!open)}
       >
         {t('About', { lng })}
-      </NavLink>
+      </MenuLink>
     </Flex>
   );
 };

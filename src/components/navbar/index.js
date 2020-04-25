@@ -8,8 +8,11 @@ import { Box, IconButton, MenuButton, NavLink, jsx } from 'theme-ui';
 import { LanguageContext, useSmoothScroll } from '../../utils';
 
 import { LanguageSwitcher } from '../';
+import PhoneCallIcon from '../../icons/142095/phone-call.svg';
+import SpeechBubbleIcon from '../../icons/142095/speech-bubble.svg';
 
 import SlideOutMenu from './slide-out-menu';
+import MenuLink from './menu-link';
 
 const Navbar = ({ open, setOpen }) => {
   const lng = React.useContext(LanguageContext);
@@ -46,22 +49,20 @@ const Navbar = ({ open, setOpen }) => {
         {t('business-name', { lng })}
       </NavLink>
       <Box sx={{ mx: 'auto' }} />
-      <NavLink
-        as={Link}
+      <MenuLink
         to={t('nav:/', { lng })}
         p={2}
-        sx={{ display: ['none', 'none', 'inline-block'] }}
+        sxp={{ display: ['none', 'none', 'inline-block'] }}
       >
         {t('Home', { lng })}
-      </NavLink>
-      <NavLink
-        as={Link}
+      </MenuLink>
+      <MenuLink
         to={t('nav:/about', { lng })}
         p={2}
-        sx={{ display: ['none', 'none', 'inline-block'] }}
+        sxp={{ display: ['none', 'none', 'inline-block'] }}
       >
         {t('About', { lng })}
-      </NavLink>
+      </MenuLink>
       <NavLink
         as="a"
         href="#contact-form"
@@ -73,18 +74,18 @@ const Navbar = ({ open, setOpen }) => {
         }}
         onClick={(e) => smoothScroll(e)}
       >
-        <Box
-          as="span"
+        <SpeechBubbleIcon
+          width="24px"
+          height="24px"
+          fill="currentcolor"
           sx={{
-            display: ['none', 'inline-block', 'none'],
+            display: ['none', 'block', 'none'],
           }}
-        >
-          {t('Msg', { lng })}
-        </Box>
+        />
         <Box
           as="span"
           sx={{
-            display: ['none', 'none', 'inline-block'],
+            display: ['none', 'none', 'block'],
           }}
         >
           {t('Contact', { lng })}
@@ -97,20 +98,23 @@ const Navbar = ({ open, setOpen }) => {
         p={2}
         sx={{
           zIndex: 2,
+          borderLeftWidth: [0, '1px'],
+          borderLeftStyle: 'solid',
+          borderLeftColor: 'primary',
         }}
       >
-        <Box
-          as="span"
+        <PhoneCallIcon
+          width="24px"
+          height="24px"
+          fill="currentcolor"
           sx={{
-            display: ['inline-block', 'inline-block', 'none'],
+            display: ['block', 'block', 'none'],
           }}
-        >
-          {t('tel', { lng })}
-        </Box>
+        />
         <Box
           as="span"
           sx={{
-            display: ['none', 'none', 'inline-block'],
+            display: ['none', 'none', 'block'],
           }}
         >
           {t('phone-number', { lng })}

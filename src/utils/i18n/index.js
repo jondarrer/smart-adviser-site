@@ -25,7 +25,7 @@ i18n
           'company-registration': 'Registered in England & Wales.',
           'if-you-would-like-us-to-contact-you':
             'If you would like us to contact you please leave us the following details:',
-          'business-name': 'Smart Adviser Ltd',
+          'business-name': 'SMART ADVISER LTD',
           'business-description': 'Accounting services in the UK',
           strapline: 'We are here to support your business!',
           'phone-number': '07731 398854',
@@ -108,7 +108,7 @@ i18n
           'company-registration': 'Înregistrat în Anglia și Țara Galilor.',
           'if-you-would-like-us-to-contact-you':
             'Daca doriti sa fiti contactat, va rugam sa lasati urmatoarele detalii:',
-          'business-name': 'Smart Adviser Ltd',
+          'business-name': 'SMART ADVISER LTD',
           'business-description': 'Servicii Contabilitate in UK',
           strapline: 'Suntem aici pentru a-ti sprijini afacerea!',
           'phone-number': '+44 7731 398854',
