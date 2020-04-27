@@ -27,27 +27,27 @@ const paths = [
     changefreq: 'daily',
   },
   {
-    path: '/about',
+    path: '/despre',
     lastmod,
     priority: '0.5',
     changefreq: 'daily',
   },
   {
-    path: '/attributions',
-    lastmod,
-    priority: '0.2',
-    changefreq: 'daily',
-  },
-  {
-    path: '/ro',
+    path: '/en',
     lastmod,
     priority: '0.8',
     changefreq: 'daily',
   },
   {
-    path: '/ro/despre',
-    lastmod: '2020-04-06',
+    path: '/en/about',
+    lastmod,
     priority: '0.5',
+    changefreq: 'daily',
+  },
+  {
+    path: '/en/attributions',
+    lastmod,
+    priority: '0.2',
     changefreq: 'daily',
   },
 ];
@@ -55,10 +55,10 @@ const paths = [
 // const routes = paths.map((path) => path.path);
 const routes = [
   '/v-next',
-  '/v-next/about',
-  '/v-next/attributions',
-  '/v-next/ro',
-  '/v-next/ro/despre',
+  '/v-next/despre',
+  '/v-next/en',
+  '/v-next/en/about',
+  '/v-next/en/attributions',
 ];
 
 module.exports = {

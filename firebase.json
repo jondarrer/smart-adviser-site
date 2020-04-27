@@ -25,20 +25,20 @@
         "destination": "/__v-next.html"
       },
       {
-        "source": "/v-next/about",
-        "destination": "/__v-next_about.html"
+        "source": "/v-next/despre",
+        "destination": "/__v-next_despre.html"
       },
       {
-        "source": "/v-next/attributions",
-        "destination": "/__v-next_attributions.html"
+        "source": "/v-next/en",
+        "destination": "/__v-next_en.html"
       },
       {
-        "source": "/v-next/ro",
-        "destination": "/__v-next_ro.html"
+        "source": "/v-next/en/about",
+        "destination": "/__v-next_en_about.html"
       },
       {
-        "source": "/v-next/ro/despre",
-        "destination": "/__v-next_ro_despre.html"
+        "source": "/v-next/en/attributions",
+        "destination": "/__v-next_en_attributions.html"
       },
       {
         "source": "!/@(js|css|jpg|png|txt)/**",

@@ -57,7 +57,7 @@ const Navbar = ({ open, setOpen }) => {
         {t('Home', { lng })}
       </MenuLink>
       <MenuLink
-        to={t('nav:/about', { lng })}
+        to={t('nav:/despre', { lng })}
         p={2}
         sxp={{ display: ['none', 'none', 'inline-block'] }}
       >

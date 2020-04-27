@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from 'theme-ui';
 
 import { Home, About, Attributions } from './routes';
@@ -13,20 +13,34 @@ const App = () => (
   <ThemeProvider theme={theme}>
     <Switch>
       <Route path="/v-next" exact>
+        <LanguageContext.Provider value="ro">
+          <Layout>
+            <Home locales={locales} formEndpoint={FORM_ENDPOINT} />
+          </Layout>
+        </LanguageContext.Provider>
+      </Route>
+      <Route path="/v-next/despre">
+        <LanguageContext.Provider value="ro">
+          <Layout>
+            <About locales={locales} />
+          </Layout>
+        </LanguageContext.Provider>
+      </Route>
+      <Route path="/v-next/en" exact>
         <LanguageContext.Provider value="en">
           <Layout>
             <Home locales={locales} formEndpoint={FORM_ENDPOINT} />
           </Layout>
         </LanguageContext.Provider>
       </Route>
-      <Route path="/v-next/about">
+      <Route path="/v-next/en/about">
         <LanguageContext.Provider value="en">
           <Layout>
             <About locales={locales} />
           </Layout>
         </LanguageContext.Provider>
       </Route>
-      <Route path="/v-next/attributions">
+      <Route path="/v-next/en/attributions">
         <LanguageContext.Provider value="en">
           <Layout>
             <Attributions locales={locales} />
@@ -34,18 +48,10 @@ const App = () => (
         </LanguageContext.Provider>
       </Route>
       <Route path="/v-next/ro" exact>
-        <LanguageContext.Provider value="ro">
-          <Layout>
-            <Home locales={locales} formEndpoint={FORM_ENDPOINT} />
-          </Layout>
-        </LanguageContext.Provider>
+        <Redirect to="/v-next" />
       </Route>
       <Route path="/v-next/ro/despre">
-        <LanguageContext.Provider value="ro">
-          <Layout>
-            <About locales={locales} />
-          </Layout>
-        </LanguageContext.Provider>
+        <Redirect to="/v-next/despre" />
       </Route>
       <Route>
         <Layout>
