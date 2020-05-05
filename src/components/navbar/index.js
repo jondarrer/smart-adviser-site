@@ -100,7 +100,7 @@ const Navbar = ({ open, setOpen }) => {
           zIndex: 2,
           borderLeftWidth: [0, '1px'],
           borderLeftStyle: 'solid',
-          borderLeftColor: 'primary',
+          borderLeftColor: [open ? 'transparent' : 'primary'],
         }}
       >
         <PhoneCallIcon
