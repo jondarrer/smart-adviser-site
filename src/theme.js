@@ -1,5 +1,5 @@
 export default {
-  breakpoints: [23.438, 40, 52, 64].map((n) => n + 'em'),
+  breakpoints: [23.438, 40, 64, 90].map((n) => n + 'em'),
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   radii: {
     service: '4px',
@@ -29,7 +29,7 @@ export default {
     highlight: '#47c1bf',
     muted: '#e6e6e6',
     gray: '#f6e8ea',
-    accent: '#947d3d',
+    accent: '#A39200',
     darken: '#00044c',
     error: '#f00',
     mildmute: '#f8f8f8',
@@ -81,6 +81,11 @@ export default {
     },
     textarea: {
       bg: 'mildmute',
+    },
+  },
+  buttons: {
+    primary: {
+      cursor: 'pointer',
     },
   },
   styles: {
