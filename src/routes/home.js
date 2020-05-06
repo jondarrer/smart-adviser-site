@@ -152,7 +152,7 @@ const Home = ({ locales, formEndpoint }) => {
             </Heading>
           </Box>
           <Button
-            bg="accent"
+            variant="secondary"
             mt={3}
             href="#contact-form"
             onClick={(e) => smoothScroll(e)}

@@ -170,6 +170,7 @@ const ContactForm = ({ formEndpoint, id, sxp }) => {
                 />
                 <Button
                   type="submit"
+                  variant="primary"
                   disabled={isSubmitting}
                   bg={isSubmitting ? 'muted' : 'primary'}
                   mt={3}

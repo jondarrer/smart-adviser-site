@@ -25,11 +25,13 @@ export default {
     text: '#293132',
     background: '#fff',
     primary: '#001561',
+    primaryhover: '#0025AD',
     secondary: '#950952',
     highlight: '#47c1bf',
     muted: '#e6e6e6',
     gray: '#f6e8ea',
-    accent: '#A39200',
+    accent: '#A39200', //'#BC9A5A',
+    accenthover: '#B7A200', //'#BC9A5A',
     darken: '#00044c',
     error: '#f00',
     mildmute: '#f8f8f8',
@@ -85,7 +87,24 @@ export default {
   },
   buttons: {
     primary: {
+      bg: 'primary',
       cursor: 'pointer',
+      transform: 'perspective(1px) translateZ(0)',
+      transitionDuration: '0.2s',
+      transitionProperty: 'color, background-color',
+      '&:hover': {
+        bg: 'primaryhover',
+      },
+    },
+    secondary: {
+      bg: 'accent',
+      cursor: 'pointer',
+      transform: 'perspective(1px) translateZ(0)',
+      transitionDuration: '0.2s',
+      transitionProperty: 'color, background-color',
+      '&:hover': {
+        bg: 'accenthover',
+      },
     },
   },
   styles: {
