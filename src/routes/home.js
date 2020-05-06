@@ -132,7 +132,13 @@ const Home = ({ locales, formEndpoint }) => {
             minHeight: ['268px', null, '364px', '436px'],
           }}
         >
-          <Heading as="h2" color="primary">
+          <Heading
+            as="h2"
+            color="primary"
+            sx={{
+              fontSize: ['18px', null, '24px', '36px'],
+            }}
+          >
             {t('business-description', { lng })}
           </Heading>
           <Box>
@@ -141,13 +147,21 @@ const Home = ({ locales, formEndpoint }) => {
               color="primary"
               sx={{
                 fontSize: ['36px', null, '48px', '64px'],
+                fontWeight: 700,
                 margin: '0 auto',
                 maxWidth: ['256px', null, '292px', '100%'],
               }}
             >
               {t('strapline', { lng })}
             </Heading>
-            <Heading as="h4" mt={1} color="primary">
+            <Heading
+              as="h4"
+              mt={1}
+              color="primary"
+              sx={{
+                fontSize: ['14px', null, '18px', '22px'],
+              }}
+            >
               {t('service:safe-fast-efficient', { lng })}
             </Heading>
           </Box>
@@ -157,7 +171,6 @@ const Home = ({ locales, formEndpoint }) => {
             href="#contact-form"
             onClick={(e) => smoothScroll(e)}
             sx={{
-              maxWidth: '140px',
               margin: '0 auto',
             }}
           >

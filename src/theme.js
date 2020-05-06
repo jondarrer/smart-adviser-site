@@ -88,8 +88,8 @@ export default {
   buttons: {
     primary: {
       bg: 'primary',
+      boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.1)',
       cursor: 'pointer',
-      transform: 'perspective(1px) translateZ(0)',
       transitionDuration: '0.2s',
       transitionProperty: 'color, background-color',
       '&:hover': {
@@ -98,8 +98,8 @@ export default {
     },
     secondary: {
       bg: 'accent',
+      boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.1)',
       cursor: 'pointer',
-      transform: 'perspective(1px) translateZ(0)',
       transitionDuration: '0.2s',
       transitionProperty: 'color, background-color',
       '&:hover': {

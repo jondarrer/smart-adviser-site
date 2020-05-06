@@ -92,6 +92,7 @@ module.exports = {
     }),
     new CopyPlugin([
       { from: 'src/images', to: 'images' },
+      { from: 'src/fonts', to: 'fonts' },
       { from: 'current', to: '' },
     ]),
   ],
