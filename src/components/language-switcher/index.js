@@ -17,14 +17,17 @@ const LanguageSwitcher = ({ languages, sxp }) => {
         return language === lng ? (
           <Box as="span" key={index} />
         ) : (
-          <IconButton key={index} m={1}>
-            <Link to={t(`nav:${location.pathname}`, { lng: language })}>
-              <Image
-                src={`/images/${language}.png`}
-                width="24px"
-                alt={`${language.toUpperCase()} flag`}
-              />
-            </Link>
+          <IconButton
+            as={Link}
+            key={index}
+            to={t(`nav:${location.pathname}`, { lng: language })}
+            mx={1}
+            my="6px"
+          >
+            <Image
+              src={`/images/${language}.png`}
+              alt={`${language.toUpperCase()} flag`}
+            />
           </IconButton>
         );
       })}
