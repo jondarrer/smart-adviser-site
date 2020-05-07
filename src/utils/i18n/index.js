@@ -19,7 +19,7 @@ i18n
         translation: {
           Home: 'Home',
           About: 'About',
-          'site-name': 'smartadviser.co.uk',
+          'site-name': 'smartadviser.co.uk/en',
           'copyright-notice': '© 2020 Smart Adviser Ltd, all rights reserved',
           'company-no': 'Company No. 11519911',
           'company-registration': 'Registered in England & Wales.',
@@ -101,7 +101,7 @@ i18n
         translation: {
           Home: 'Casa',
           About: 'Despre',
-          'site-name': 'smartadviser.co.uk/ro',
+          'site-name': 'smartadviser.co.uk',
           'copyright-notice':
             '© 2020 Smart Adviser Ltd, toate drepturile rezervate',
           'company-no': 'Nr. Companie 11519911',
