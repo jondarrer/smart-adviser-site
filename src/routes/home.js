@@ -221,56 +221,67 @@ const Home = ({ locales, formEndpoint }) => {
           px={['3', '3', '4']}
           pt={['3', '3', '4']}
         >
-          <ServiceDescription
-            title="heading:self-employment"
-            id="self-employment"
-            Icon={SuitIcon}
-            subServices={[
-              { text: 'service:tax-return', Icon: CalculatorIcon },
-              {
-                text: 'service:registered-as-self-employed',
-                Icon: Archive1Icon,
-              },
-              { text: 'service:registered-in-cis', Icon: Archive1Icon },
-              { text: 'service:penalty-appeal', Icon: AnswerIcon },
-              { text: 'service:employment-history', Icon: ArchiveIcon },
-            ]}
-          ></ServiceDescription>
-          <ServiceDescription
-            title="heading:limited-companies"
-            id="limited-companies"
-            Icon={SuitcaseIcon}
-            subServices={[
-              { text: 'service:set-up-a-company', Icon: BankIcon },
-              { text: 'service:strike-off-a-company', Icon: TrashIcon },
-              { text: 'service:company-tax-return', Icon: CalculatorIcon },
-              { text: 'service:bookkeeping', Icon: BookIcon },
-              { text: 'service:cis-vat-paye-reg', Icon: ClipboardIcon },
-              { text: 'service:vat-return', Icon: CalculatorIcon },
-              { text: 'service:paye', Icon: MoneyIcon },
-              { text: 'service:cis-monthly-returns', Icon: GraphIcon },
-            ]}
-          ></ServiceDescription>
-          <ServiceDescription
-            title="heading:benefits"
-            id="benefits"
-            Icon={MagnifyingGlassIcon}
-            subServices={[
-              { text: 'service:universal-credits', Icon: GearIcon },
-              { text: 'service:child-benefit', Icon: PiggyBankIcon },
-              { text: 'service:maternity-allowance', Icon: Accounting1Icon },
-            ]}
-          ></ServiceDescription>
-          <ServiceDescription
-            title="heading:other-services"
-            id="other-services"
-            Icon={Accounting2Icon}
-            subServices={[
-              { text: 'service:cv', Icon: PlanningIcon },
-              { text: 'service:complete-different-forms', Icon: NewsIcon },
-              { text: 'service:equivalent-uk-qualifications', Icon: CardIcon },
-            ]}
-          ></ServiceDescription>
+          <Box>
+            <ServiceDescription
+              title="heading:self-employment"
+              id="self-employment"
+              Icon={SuitIcon}
+              subServices={[
+                { text: 'service:tax-return', Icon: CalculatorIcon },
+                {
+                  text: 'service:registered-as-self-employed',
+                  Icon: Archive1Icon,
+                },
+                { text: 'service:registered-in-cis', Icon: Archive1Icon },
+                { text: 'service:penalty-appeal', Icon: AnswerIcon },
+                { text: 'service:employment-history', Icon: ArchiveIcon },
+              ]}
+            ></ServiceDescription>
+          </Box>
+          <Box>
+            <ServiceDescription
+              title="heading:limited-companies"
+              id="limited-companies"
+              Icon={SuitcaseIcon}
+              subServices={[
+                { text: 'service:set-up-a-company', Icon: BankIcon },
+                { text: 'service:strike-off-a-company', Icon: TrashIcon },
+                { text: 'service:company-tax-return', Icon: CalculatorIcon },
+                { text: 'service:bookkeeping', Icon: BookIcon },
+                { text: 'service:cis-vat-paye-reg', Icon: ClipboardIcon },
+                { text: 'service:vat-return', Icon: CalculatorIcon },
+                { text: 'service:paye', Icon: MoneyIcon },
+                { text: 'service:cis-monthly-returns', Icon: GraphIcon },
+              ]}
+            ></ServiceDescription>
+          </Box>
+          <Box>
+            <ServiceDescription
+              title="heading:benefits"
+              id="benefits"
+              Icon={MagnifyingGlassIcon}
+              subServices={[
+                { text: 'service:universal-credits', Icon: GearIcon },
+                { text: 'service:child-benefit', Icon: PiggyBankIcon },
+                { text: 'service:maternity-allowance', Icon: Accounting1Icon },
+              ]}
+            ></ServiceDescription>
+          </Box>
+          <Box>
+            <ServiceDescription
+              title="heading:other-services"
+              id="other-services"
+              Icon={Accounting2Icon}
+              subServices={[
+                { text: 'service:cv', Icon: PlanningIcon },
+                { text: 'service:complete-different-forms', Icon: NewsIcon },
+                {
+                  text: 'service:equivalent-uk-qualifications',
+                  Icon: CardIcon,
+                },
+              ]}
+            ></ServiceDescription>
+          </Box>
         </Grid>
       </Container>
       <Container>

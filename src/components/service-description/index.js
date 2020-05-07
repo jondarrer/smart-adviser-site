@@ -5,16 +5,23 @@ import { useTranslation } from 'react-i18next';
 
 import { LanguageContext } from '../../utils';
 
-const ServiceDescription = ({ title, Icon, subServices, sx, ...rest }) => {
+const ServiceDescription = ({ title, Icon, subServices, sxp, ...rest }) => {
   const lng = React.useContext(LanguageContext);
   const { t, i18n } = useTranslation();
 
   return (
-    <Box sx={{ ...sx }} {...rest}>
+    <Box
+      sx={{
+        boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.1)',
+        borderRadius: 'service',
+        ...sxp,
+      }}
+      {...rest}
+    >
       <Heading
         as="h2"
         px={2}
-        py={1}
+        py={2}
         bg="primary"
         color="background"
         sx={{ borderTopLeftRadius: 'service', borderTopRightRadius: 'service' }}
@@ -23,7 +30,7 @@ const ServiceDescription = ({ title, Icon, subServices, sx, ...rest }) => {
           width="24px"
           height="24px"
           fill="currentcolor"
-          sx={{ marginRight: 2 }}
+          sx={{ ml: 1, mr: 2 }}
         />
         {t(title, { lng })}
       </Heading>
