@@ -35,6 +35,7 @@ export default {
     darken: '#00044c',
     error: '#f00',
     mildmute: '#f8f8f8',
+    errormute: '#fff8f8',
     modes: {
       dark: {
         text: '#fff',
@@ -81,6 +82,10 @@ export default {
     input: {
       bg: 'mildmute',
     },
+    inputerror: {
+      bg: 'errormute',
+      borderColor: 'error',
+    },
     textarea: {
       bg: 'mildmute',
     },
@@ -92,8 +97,11 @@ export default {
       cursor: 'pointer',
       transitionDuration: '0.2s',
       transitionProperty: 'color, background-color',
-      '&:hover': {
+      '&:not([disabled]):hover': {
         bg: 'primaryhover',
+      },
+      '&[disabled]': {
+        bg: 'muted',
       },
     },
     secondary: {
@@ -102,8 +110,11 @@ export default {
       cursor: 'pointer',
       transitionDuration: '0.2s',
       transitionProperty: 'color, background-color',
-      '&:hover': {
+      '&:not([disabled]):hover': {
         bg: 'accenthover',
+      },
+      '&:[disabled]': {
+        bg: 'muted',
       },
     },
   },

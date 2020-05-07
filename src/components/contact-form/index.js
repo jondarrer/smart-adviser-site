@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { Formik } from 'formik';
-import { Box, Button, Grid, Input, Label, Message, Textarea } from 'theme-ui';
+import {
+  Box,
+  Button,
+  Grid,
+  Input,
+  Label,
+  Message,
+  Spinner,
+  Textarea,
+} from 'theme-ui';
 import { useTranslation } from 'react-i18next';
 import fetch from 'unfetch';
 
@@ -88,8 +97,8 @@ const ContactForm = ({ formEndpoint, id, sxp }) => {
             {response.message && (
               <Message
                 my="3"
-                bg={response.isError ? 'error' : 'highlight'}
-                color={response.isError ? 'background' : 'text'}
+                bg={response.isError ? 'error' : 'secondary'}
+                color={response.isError ? 'background' : 'background'}
               >
                 {t(response.message, { lng })}
               </Message>
@@ -115,6 +124,7 @@ const ContactForm = ({ formEndpoint, id, sxp }) => {
                 <Input
                   type="text"
                   name="name"
+                  variant={errors.name && touched.name ? 'inputerror' : 'input'}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.name}
@@ -131,6 +141,9 @@ const ContactForm = ({ formEndpoint, id, sxp }) => {
                 <Input
                   type="text"
                   name="phone"
+                  variant={
+                    errors.phone && touched.phone ? 'inputerror' : 'input'
+                  }
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.phone}
@@ -147,6 +160,9 @@ const ContactForm = ({ formEndpoint, id, sxp }) => {
                 <Input
                   type="email"
                   name="email"
+                  variant={
+                    errors.email && touched.email ? 'inputerror' : 'input'
+                  }
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.email}
@@ -175,6 +191,17 @@ const ContactForm = ({ formEndpoint, id, sxp }) => {
                   bg={isSubmitting ? 'muted' : 'primary'}
                   mt={3}
                 >
+                  {isSubmitting && (
+                    <>
+                      <Spinner
+                        size="16px"
+                        sx={{
+                          position: 'relative',
+                          top: '2px',
+                        }}
+                      />{' '}
+                    </>
+                  )}
                   {t('form-label:submit', { lng })}
                 </Button>
               </Box>
