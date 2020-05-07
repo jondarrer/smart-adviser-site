@@ -96,12 +96,12 @@ const Home = ({ locales, formEndpoint }) => {
               "@id": "https://schema.org",
               "name": {
                 "@id": "https://schema.org/name",
-                "@language": "${lng}",
+                "@language": "${lng}"
               },
               "url": {
                 "@id": "https://schema.org/url",
-                "@language": "${lng}",
-              },
+                "@language": "${lng}"
+              }
             },
             "@type": "Organization",
             "url": "https://${t('site-name', { lng })}",
@@ -109,8 +109,8 @@ const Home = ({ locales, formEndpoint }) => {
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "${t('phone-number-to-call', { lng })}",
-              "contactType": "customer service",
-            },
+              "contactType": "customer service"
+            }
           }`}
         </script>
       </Helmet>
