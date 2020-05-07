@@ -8,6 +8,8 @@ import { LanguageContext } from '../../utils';
 const ServiceDescription = ({ title, Icon, subServices, sxp, ...rest }) => {
   const lng = React.useContext(LanguageContext);
   const { t, i18n } = useTranslation();
+  const removePricingRO = / -( de la)? £\d+/gi;
+  const removePricingEN = / -( from)? £\d+/gi;
 
   return (
     <Box
@@ -53,7 +55,10 @@ const ServiceDescription = ({ title, Icon, subServices, sxp, ...rest }) => {
               fill="currentcolor"
               sx={{ marginRight: 2 }}
             />
-            {t(text, { lng }).replace(/ -( de la)? £\d+/gi, '')}
+            {t(text, { lng }).replace(
+              lng === 'ro' ? removePricingRO : removePricingEN,
+              ''
+            )}
           </Box>
         ))}
       </Box>
