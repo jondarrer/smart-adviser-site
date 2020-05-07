@@ -53,7 +53,7 @@ const ServiceDescription = ({ title, Icon, subServices, sxp, ...rest }) => {
               fill="currentcolor"
               sx={{ marginRight: 2 }}
             />
-            {t(text, { lng })}
+            {t(text, { lng }).replace(/ -( de la)? £\d+/gi, '')}
           </Box>
         ))}
       </Box>
