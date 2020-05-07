@@ -43,6 +43,10 @@ const Navbar = ({ open, setOpen }) => {
         variant={open ? 'navmenuopen' : 'nav'}
         sx={{
           zIndex: 2,
+          transitionDuration: '0.2s',
+          transitionProperty: 'color',
+          fontSize: ['15px', 2],
+          lineHeight: '28px',
         }}
         onClick={() => setOpen(false)}
       >
