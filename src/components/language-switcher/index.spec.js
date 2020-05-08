@@ -21,21 +21,17 @@ describe('LanguageSwitcher', () => {
       <div
         className="css-urkcus-LanguageSwitcher"
       >
-        <button
-          className="css-17qau8q"
+        <a
+          className="css-1wd5j00"
+          href="/v-next/en/about"
+          onClick={[Function]}
         >
-          <a
-            href="/v-next/en/about"
-            onClick={[Function]}
-          >
-            <img
-              alt="EN flag"
-              className="css-9taffg"
-              src="/images/en.png"
-              width="24px"
-            />
-          </a>
-        </button>
+          <img
+            alt="EN flag"
+            className="css-9taffg"
+            src="/images/en.png"
+          />
+        </a>
         <span
           className="css-vurnku"
         />
@@ -59,21 +55,17 @@ describe('LanguageSwitcher', () => {
         <span
           className="css-vurnku"
         />
-        <button
-          className="css-17qau8q"
+        <a
+          className="css-1wd5j00"
+          href="/v-next/despre"
+          onClick={[Function]}
         >
-          <a
-            href="/v-next/despre"
-            onClick={[Function]}
-          >
-            <img
-              alt="RO flag"
-              className="css-9taffg"
-              src="/images/ro.png"
-              width="24px"
-            />
-          </a>
-        </button>
+          <img
+            alt="RO flag"
+            className="css-9taffg"
+            src="/images/ro.png"
+          />
+        </a>
       </div>
     `);
   });

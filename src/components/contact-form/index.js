@@ -13,7 +13,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import fetch from 'unfetch';
 
-import { LanguageContext } from '../../utils';
+import { LanguageContext, useSmoothScroll } from '../../utils';
 
 const ContactForm = ({ formEndpoint, id, sxp }) => {
   const lng = React.useContext(LanguageContext);
@@ -22,6 +22,7 @@ const ContactForm = ({ formEndpoint, id, sxp }) => {
     isError: false,
     message: '',
   });
+  const smoothScroll = useSmoothScroll({ '0': 44, '640': 0 });
 
   return (
     <Box id={id} sx={{ ...sxp }}>
@@ -68,6 +69,7 @@ const ContactForm = ({ formEndpoint, id, sxp }) => {
                   // Show the error
                   setResponse({ isError: true, message: response.error });
                   setSubmitting(false);
+                  smoothScroll(id);
                 } else {
                   // Show the confirmation dialog
                   setResponse({
@@ -75,11 +77,13 @@ const ContactForm = ({ formEndpoint, id, sxp }) => {
                     message: response.submission_text,
                   });
                   resetForm();
+                  smoothScroll(id);
                 }
               })
               .catch((error) => {
                 setResponse({ isError: true, message: error });
                 setSubmitting(false);
+                smoothScroll(id);
               });
           }, 400);
         }}
@@ -96,6 +100,7 @@ const ContactForm = ({ formEndpoint, id, sxp }) => {
           <>
             {response.message && (
               <Message
+                id="form-message"
                 my="3"
                 bg={response.isError ? 'error' : 'secondary'}
                 color={response.isError ? 'background' : 'background'}
