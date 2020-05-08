@@ -76,7 +76,10 @@ const Navbar = ({ open, setOpen }) => {
           display: ['none', 'inline-block'],
           zIndex: 2,
         }}
-        onClick={(e) => smoothScroll(e)}
+        onClick={(e) => {
+          setOpen(false);
+          smoothScroll(e);
+        }}
       >
         <SpeechBubbleIcon
           width="24px"
@@ -106,6 +109,7 @@ const Navbar = ({ open, setOpen }) => {
           borderLeftStyle: 'solid',
           borderLeftColor: [open ? 'transparent' : 'primary'],
         }}
+        onClick={(e) => setOpen(false)}
       >
         <PhoneCallIcon
           width="24px"
