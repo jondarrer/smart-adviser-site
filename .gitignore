@@ -69,3 +69,6 @@ dist
 
 # webpack stats file
 stats.json
+
+# MacOS
+.DS_Store
