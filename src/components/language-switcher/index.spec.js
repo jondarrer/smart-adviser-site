@@ -23,7 +23,7 @@ describe('LanguageSwitcher', () => {
       >
         <a
           className="css-1wd5j00"
-          href="/v-next/en/about"
+          href="/en/about"
           onClick={[Function]}
         >
           <img
@@ -57,7 +57,7 @@ describe('LanguageSwitcher', () => {
         />
         <a
           className="css-1wd5j00"
-          href="/v-next/despre"
+          href="/despre"
           onClick={[Function]}
         >
           <img
