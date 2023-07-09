@@ -129,8 +129,8 @@ i18n
         nav: {
           '/': '/',
           '/despre': '/despre',
-          '/en': '',
-          '/en/about': '/despre',
+          '/en': '/en',
+          '/en/about': '/en/about',
           '/v-next': '/v-next',
           '/v-next/despre': '/v-next/despre',
           '/v-next/en': '/v-next',
