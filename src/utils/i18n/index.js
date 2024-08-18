@@ -47,10 +47,6 @@ i18n
           '/despre': '/en/about',
           '/en': '/en',
           '/en/about': '/en/about',
-          '/v-next': '/v-next/en',
-          '/v-next/despre': '/v-next/en/about',
-          '/v-next/en': '/v-next/en',
-          '/v-next/en/about': '/v-next/en/about',
         },
         heading: {
           'online-services': 'Online services',
@@ -81,7 +77,7 @@ i18n
           cv: 'CV (Curriculum Vitae)',
           'complete-different-forms': 'Complete different forms',
           'equivalent-uk-qualifications': 'Equivalent UK qualifications',
-          'legal-translations': 'Legalized translations or Apostille'
+          'legal-translations': 'Legalized translations or Apostille',
         },
         'form-label': {
           name: 'Name:',
@@ -131,10 +127,6 @@ i18n
           '/despre': '/despre',
           '/en': '/en',
           '/en/about': '/en/about',
-          '/v-next': '/v-next',
-          '/v-next/despre': '/v-next/despre',
-          '/v-next/en': '/v-next',
-          '/v-next/en/about': '/v-next/despre',
         },
         heading: {
           'online-services': 'Servicii Online',
@@ -166,7 +158,7 @@ i18n
           cv: 'CV (Curriculum Vitae)',
           'complete-different-forms': 'Completari formulare diverse',
           'equivalent-uk-qualifications': 'Echivalare studii prin UK Naric',
-          'legal-translations': 'Traduceri legalizate sau Apostilare'
+          'legal-translations': 'Traduceri legalizate sau Apostilare',
         },
         'form-label': {
           name: 'Numele:',

@@ -1,0 +1,50 @@
+name: Deploy the main branch to Firebase
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: yarn install --immutable --immutable-cache --check-cache
+      - run: yarn test
+
+  main:
+    needs: test
+    name: Build and deploy to Firebase
+    runs-on: ubuntu-latest
+    env:
+      NODE_OPTIONS: --openssl-legacy-provider
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: yarn install --immutable --immutable-cache --check-cache
+      - run: yarn add sharp --ignore-engines
+      - run: yarn build
+      - run:
+          echo $APPLICATION_DEFAULT_CREDENTIALS_JSON >
+          $GOOGLE_APPLICATION_CREDENTIALS
+        env:
+          APPLICATION_DEFAULT_CREDENTIALS_JSON:
+            ${{ secrets.APPLICATION_DEFAULT_CREDENTIALS_JSON }}
+          GOOGLE_APPLICATION_CREDENTIALS:
+            ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+          FORM_ENDPOINT: ${{ secrets.FORM_ENDPOINT }}
+      - uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS:
+            ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}

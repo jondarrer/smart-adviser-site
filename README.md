@@ -17,32 +17,32 @@ variable to link to
 [99inbound](https://docs.99inbound.com/form-endpoints/installation/).
 
 ```bash
-npm start
+NODE_OPTIONS=--openssl-legacy-provider npm start
 ```
 
 You can also try out how it will work when deployed to Firebase with:
 
 ```bash
-npm run start:fb
+NODE_OPTIONS=--openssl-legacy-provider npm run start:fb
 ```
 
 Which will run the following commands:
 
 ```bash
-npm run build
+NODE_OPTIONS=--openssl-legacy-provider npm run build
 firebase serve --only hosting
 ```
 
 ### Test
 
 ```bash
-npm test
+NODE_OPTIONS=--openssl-legacy-provider npm test
 ```
 
 ### Build
 
 ```bash
-npm run build
+NODE_OPTIONS=--openssl-legacy-provider npm run build
 ```
 
 ### Deploy

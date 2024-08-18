@@ -5,8 +5,6 @@ import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
 import { resolve } from 'path';
 
-import App from './src/app';
-
 const pad = (n, width, z) => {
   z = z || '0';
   n = n + '';
@@ -23,50 +21,44 @@ const paths = [
   {
     path: '/',
     lastmod,
-    priority: '0.8',
+    priority: 0.8,
     changefreq: 'daily',
   },
   {
     path: '/despre',
     lastmod,
-    priority: '0.5',
+    priority: 0.5,
     changefreq: 'daily',
   },
   {
     path: '/en',
     lastmod,
-    priority: '0.8',
+    priority: 0.8,
     changefreq: 'daily',
   },
   {
     path: '/en/about',
     lastmod,
-    priority: '0.5',
+    priority: 0.5,
     changefreq: 'daily',
   },
   {
     path: '/en/attributions',
     lastmod,
-    priority: '0.2',
+    priority: 0.2,
     changefreq: 'daily',
   },
 ];
 
 // const routes = paths.map((path) => path.path);
-const routes = [
-  '/v-next',
-  '/v-next/despre',
-  '/v-next/en',
-  '/v-next/en/about',
-  '/v-next/en/attributions',
-];
+const routes = ['/', '/despre', '/en', '/en/about', '/en/attributions'];
 
 module.exports = {
   entry: resolve(__dirname, 'src'),
   output: {
     path: resolve(__dirname, 'dist'),
     publicPath: '/',
-    filename: 'v-next-bundle.js',
+    filename: 'bundle.js',
   },
   module: {
     rules: [
@@ -83,18 +75,20 @@ module.exports = {
       filename: 'default.html',
       scriptLoading: 'defer',
     }),
-    new SitemapPlugin('https://smartadviser.co.uk', paths),
+    new SitemapPlugin({ base: 'https://smartadviser.co.uk', paths }),
     new FaviconsWebpackPlugin(),
     new ReactStaticSiteHydrater({
       routes,
-      component: App,
+      componentPath: resolve(__dirname, './src/app.js'),
+      plugins: ['react-router', 'helmet', 'firebase'],
       baseFilename: 'default.html',
     }),
-    new CopyPlugin([
-      { from: 'src/images', to: 'images' },
-      { from: 'src/fonts', to: 'fonts' },
-      { from: 'current', to: '' },
-    ]),
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/images', to: 'images' },
+        { from: 'src/fonts', to: 'fonts' },
+      ],
+    }),
   ],
   devServer: {
     contentBase: resolve(__dirname, 'dist'),

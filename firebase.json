@@ -1,44 +1,27 @@
 {
   "hosting": {
     "public": "dist",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "trailingSlash": false,
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
     "rewrites": [
       {
-        "source": "/about",
-        "destination": "/__about.html"
+        "source": "/despre",
+        "destination": "/__despre.html"
       },
       {
-        "source": "/attributions",
-        "destination": "/__attributions.html"
+        "source": "/en",
+        "destination": "/__en.html"
       },
       {
-        "source": "/ro",
-        "destination": "/__ro.html"
+        "source": "/en/about",
+        "destination": "/__en_about.html"
       },
       {
-        "source": "/ro/despre",
-        "destination": "/__ro_despre.html"
-      },
-      {
-        "source": "/v-next",
-        "destination": "/__v-next.html"
-      },
-      {
-        "source": "/v-next/despre",
-        "destination": "/__v-next_despre.html"
-      },
-      {
-        "source": "/v-next/en",
-        "destination": "/__v-next_en.html"
-      },
-      {
-        "source": "/v-next/en/about",
-        "destination": "/__v-next_en_about.html"
-      },
-      {
-        "source": "/v-next/en/attributions",
-        "destination": "/__v-next_en_attributions.html"
+        "source": "/en/attributions",
+        "destination": "/__en_attributions.html"
       },
       {
         "source": "!/@(js|css|jpg|png|txt)/**",

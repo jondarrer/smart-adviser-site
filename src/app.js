@@ -12,50 +12,50 @@ const locales = ['ro', 'en-gb'];
 const App = () => (
   <ThemeProvider theme={theme}>
     <Switch>
-      <Route path="/v-next" exact>
+      <Route path="/" exact>
         <LanguageContext.Provider value="ro">
           <Layout>
             <Home locales={locales} formEndpoint={FORM_ENDPOINT} />
           </Layout>
         </LanguageContext.Provider>
       </Route>
-      <Route path="/v-next/despre">
+      <Route path="/despre">
         <LanguageContext.Provider value="ro">
           <Layout>
             <About locales={locales} />
           </Layout>
         </LanguageContext.Provider>
       </Route>
-      <Route path="/v-next/en" exact>
+      <Route path="/en" exact>
         <LanguageContext.Provider value="en">
           <Layout>
             <Home locales={locales} formEndpoint={FORM_ENDPOINT} />
           </Layout>
         </LanguageContext.Provider>
       </Route>
-      <Route path="/v-next/en/about">
+      <Route path="/en/about">
         <LanguageContext.Provider value="en">
           <Layout>
             <About locales={locales} />
           </Layout>
         </LanguageContext.Provider>
       </Route>
-      <Route path="/v-next/en/attributions">
+      <Route path="/en/attributions">
         <LanguageContext.Provider value="en">
           <Layout>
             <Attributions locales={locales} />
           </Layout>
         </LanguageContext.Provider>
       </Route>
-      <Route path="/v-next/ro" exact>
-        <Redirect to="/v-next" />
+      <Route path="/ro" exact>
+        <Redirect to="/" />
       </Route>
-      <Route path="/v-next/ro/despre">
-        <Redirect to="/v-next/despre" />
+      <Route path="/ro/despre">
+        <Redirect to="/despre" />
       </Route>
       <Route>
         <Layout>
-          <h1>not-found</h1>
+          <h1>not-found :(</h1>
         </Layout>
       </Route>
     </Switch>
