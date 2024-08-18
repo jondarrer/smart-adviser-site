@@ -57,7 +57,7 @@ describe('LanguageSwitcher', () => {
         />
         <a
           className="css-1wd5j00"
-          href="/en/about"
+          href="/despre"
           onClick={[Function]}
         >
           <img

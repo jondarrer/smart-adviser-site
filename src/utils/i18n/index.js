@@ -125,8 +125,8 @@ i18n
         nav: {
           '/': '/',
           '/despre': '/despre',
-          '/en': '/en',
-          '/en/about': '/en/about',
+          '/en': '/',
+          '/en/about': '/despre',
         },
         heading: {
           'online-services': 'Servicii Online',
